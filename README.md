@@ -20,16 +20,16 @@ Install middleman:
 gem install middleman
 ```
 
-Make sure all dependencies are available to the application:
-
-```
-bundle install
-```
-
 Navigate to the project folder
 
 ```
 cd accessibility-sandox
+```
+
+Make sure all dependencies are available to the application:
+
+```
+bundle install
 ```
 
 Run middleman server
