@@ -48,11 +48,16 @@ li.L9 {
 pre.prettyprint {
   position:relative;
   border:1px solid #ddd;
-  padding:0px 0px 0px 10px;
+  padding:0px 0px 1em 10px;
   background:#fdfdfd;
   color:#bbb;
 }
 
 .live-example {
   border-top:1px solid #ddd;
+}
+
+.l-container {
+  margin: 0 auto;
+  max-width:960px;
 }
