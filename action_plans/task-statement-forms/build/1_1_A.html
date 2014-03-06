@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1_1_A - Tell your story</title>
+  <style>
+    .form-input-status{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Tell your story</legend>
+      <p class="task__statement task__statement--l task__statement--l--spaced">
+        I was/will be made redundant on
+        <select class="form-select form-select--task form-input-number--task--l is-complete" aria-label="Month you were/will be made redundant from your job">
+          <option value="">January</option>
+          <option value="">February</option>
+          <option value="">March</option>
+          <option value="">April</option>
+          <option value="">May</option>
+          <option value="">June</option>
+          <option value="">July</option>
+          <option value="">August</option>
+          <option value="">September</option>
+          <option value="">October</option>
+          <option value="">November</option>
+          <option value="">December</option>
+        </select>
+        <select class="form-select form-select--task form-input-number--task--l is-complete" aria-label="Year you were/will be made redundant from your job">
+          <option value="">2013</option>
+          <option value="">2014</option>
+          <option value="">2015</option>
+          <option value="">2016</option>
+        </select>
+      </p>
+      <p class="task__statement task__statement--l task__statement--l--spaced">
+        I started this job in
+        <span class="form-input-wrap">
+          <select class="form-select form-select--task form-input-number--task--l has-error" aria-required="true" aria-invalid="true" aria-describedby="error-date-month" aria-label="Month you started your job">
+            <option value="">January</option>
+            <option value="">February</option>
+            <option value="">March</option>
+            <option value="">April</option>
+            <option value="">May</option>
+            <option value="">June</option>
+            <option value="">July</option>
+            <option value="">August</option>
+            <option value="">September</option>
+            <option value="">October</option>
+            <option value="" selected>November</option>
+            <option value="">December</option>
+          </select>
+          <span class="form-input-status form-input-status--pos-top form-input-status--info" id="error-date-month" role="alert">
+            <span class="form-input-status__msg">Please confirm</span>
+          </span>
+        </span>
+        <select class="form-select form-select--task form-input-number--task--l" aria-label="Year you started your job">
+          <option value="">2001</option>
+          <option value="">2002</option>
+          <option value="">2003</option>
+          <option value="">2004</option>
+          <option value="">2005</option>
+          <option value="">2006</option>
+          <option value="">2007</option>
+          <option value="">2008</option>
+          <option value="">2009</option>
+          <option selected value="">2010</option>
+          <option value="">2011</option>
+          <option value="">2012</option>
+          <option value="">2013</option>
+          <option value="">2014</option>
+        </select>
+      </p>
+      <p class="task__statement task__statement--l task__statement--l--spaced">
+        My annual salary was/is &pound;
+        <span class="form-input-wrap">
+          <input class="form-input-number form-input-number--task form-input-number--task--l form-input-number--task--salary has-error" type="number" min="0" step="10" value="0" aria-describedby="error-salary" aria-required="true">
+          <span class="form-input-status form-input-status--pos-top form-input-status--info" id="error-salary" role="alert">
+            <span class="form-input-status__msg">Please enter a number</span>
+          </span>
+        </span>
+      </p>
+      <p class="task__statement task__statement--l task__statement--l--spaced">
+        My date of birth is
+        <select class="form-select form-select--task form-input-number--task--l" aria-label="Day of birth">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+          <option value="">11</option>
+          <option value="">12</option>
+          <option value="">13</option>
+          <option value="">14</option>
+          <option value="">15</option>
+          <option value="">16</option>
+          <option value="">17</option>
+          <option value="">18</option>
+          <option value="">19</option>
+          <option value="">20</option>
+          <option value="">21</option>
+          <option value="">22</option>
+          <option value="">23</option>
+          <option value="">24</option>
+          <option value="">25</option>
+          <option value="">26</option>
+          <option value="">27</option>
+          <option value="">28</option>
+          <option value="">29</option>
+          <option value="">30</option>
+          <option value="">31</option>
+        </select>
+        <span class="form-input-wrap">
+          <select class="form-select form-select--task form-input-number--task--l" aria-label="Month of birth">
+            <option value="">January</option>
+            <option value="">February</option>
+            <option value="">March</option>
+            <option value="">April</option>
+            <option value="">May</option>
+            <option value="">June</option>
+            <option value="">July</option>
+            <option value="">August</option>
+            <option value="" selected>September</option>
+            <option value="">October</option>
+            <option value="">November</option>
+            <option value="">December</option>
+          </select>
+        </span>
+        <select class="form-select form-select--task form-input-number--task--l" aria-label="Year of birth">
+          <option value="">2001</option>
+          <option value="">2002</option>
+          <option value="">2003</option>
+          <option value="">2004</option>
+          <option value="">2005</option>
+          <option value="">2006</option>
+          <option value="">2007</option>
+          <option value="">2008</option>
+          <option value="">2009</option>
+          <option selected value="">2010</option>
+          <option value="">2011</option>
+          <option value="">2012</option>
+          <option value="">2013</option>
+          <option value="">2014</option>
+        </select>
+      </p>
+      <input type="submit" value="Next">
+      <input type="submit" value="Previous">
+    </fieldset>
+  </form>
+</body>
+</html>
