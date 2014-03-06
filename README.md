@@ -1,39 +1,63 @@
-accessibility-sandbox
-=====================
+# accessibility-sandbox
 
-1. Check out the repository
-2. Install middleman
-
-    gem install middleman
-
-3. Bundle install
-
-    bundle install
-
-4. Navigate to the project folder
-
-    cd accessibility-sandox
-
-5. Run middleman server
-
-    middleman server
-
-6. You can view the site at: http://0.0.0.0:4567/
+This is a repository to try out and pusblish solutions to accessibility challenges.  Examples are published on github pages to can be reviewed by our accessibility partner.
 
 
-** To deploy to github pages
+[http://moneyadviceservice.github.io/accessibility-sandbox/](http://moneyadviceservice.github.io/accessibility-sandbox/)
 
-1. Commit your changes to master
 
+##Running files locally
+
+Clone the repository:
+
+```
+git clone git@github.com:moneyadviceservice/accessibility-sandbox.git
+```
+
+Install middleman:
+	
+```
+gem install middleman
+```
+
+Make sure all dependencies are available to the application:
+
+```
+bundle install
+```
+
+Navigate to the project folder
+
+```
+cd accessibility-sandox
+```
+
+Run middleman server
+
+```
+middleman server
+```
+
+You can view the site at: [http://0.0.0.0:4567/](http://0.0.0.0:4567/)
+
+
+##To deploy to github pages
+
+Commit your changes to master
+
+```
     git add .
     git commit "{insert commit message}"
     git push
+```
 
-2. Run rake task to publish to the gh-pages branch
+Run rake task to publish to the gh-pages branch
 
     rake publish
 
-[note: if you have not commited changes to master you will get an error message!]
+(note: if you have not commited changes to master you will get an error message!)
 
 
-3. You can now view on github pages: http://moneyadviceservice.github.io/accessibility-sandbox/
+You can now view on github pages: 
+
+[http://moneyadviceservice.github.io/accessibility-sandbox/](http://moneyadviceservice.github.io/accessibility-sandbox/)
