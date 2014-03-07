@@ -32,34 +32,42 @@
     </script>
   </head>
   
-  <body class="form-sentences form-sentences_basic-sentence">
+  <body class="form-sentences form-sentences_form-label">
     <div class="l-container">
       <div class="live-example">
 <form action="">
-  <h1>Tell your story</h1>
-  <p>
-    I was/will be made redundant on
-    <select>
-      <option value="">January</option>
-      <option value="">February</option>
-      <option value="">March</option>
-      <option value="">April</option>
-      <option value="">May</option>
-      <option value="">June</option>
-      <option value="">July</option>
-      <option value="">August</option>
-      <option value="">September</option>
-      <option value="">October</option>
-      <option value="">November</option>
-      <option value="">December</option>
-    </select>
-    <select>
-      <option value="">2013</option>
-      <option value="">2014</option>
-      <option value="">2015</option>
-      <option value="">2016</option>
-    </select>
-  </p>
+  <fieldset>
+    <legend>Tell your story</legend>
+      <fieldset>
+        I was/will be made redundant on
+        <label for="month">
+          <span class="visually-hidden">Month</span>
+          <select id="month">
+            <option value="">January</option>
+            <option value="">February</option>
+            <option value="">March</option>
+            <option value="">April</option>
+            <option value="">May</option>
+            <option value="">June</option>
+            <option value="">July</option>
+            <option value="">August</option>
+            <option value="">September</option>
+            <option value="">October</option>
+            <option value="">November</option>
+            <option value="">December</option>
+          </select>
+        </label>
+        <label for="year">
+          <span class="visually-hidden">Year</span>
+          <select id="year">
+            <option value="">2013</option>
+            <option value="">2014</option>
+            <option value="">2015</option>
+            <option value="">2016</option>
+          </select>
+        </label>
+    </fieldset>
+  </fieldset>
 </form>
 </div>
     </div>
