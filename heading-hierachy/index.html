@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Search Results</title>
+    <title>Heading Hierarchy</title>
     
     <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
@@ -32,36 +32,37 @@
     </script>
   </head>
   
-  <body class="search-results search-results_index">
+  <body class="heading-hierachy heading-hierachy_index">
     <div class="l-container">
-      <h1>Search Results</h1>
+      <h1>Heading Hierarchy</h1>
 
 <h2>Questions</h2>
 
-<p>What is the best way to markup search results?</p>
+<p>Jaw 12, 13 and 4 incorrectly report the heading level of headings inside HTML5 
+  elements such as section, article, nav and aside in IE and Firefox</p>
 
 <ul>
-  <li><a href="ordered-list.html">Ordered list</a></li>
-  <li><a href="unordered-list.html">Unordered list</a></li>
-  <li><a href="articles.html">Articles</a></li>
+  <li><a href="http://accessibleculture.org/articles/2011/10/jaws-ie-and-headings-in-html5/">JAWS, IE and Headings in HTML5</a></li>
+  <li><a href="http://juicystudio.com/article/html5-outline-algorithm-jaws.php">The HTML5 outline algorithm and JAWS</a></li>
 </ul>
 
-<p>If using a list is it better to not have headings inside the list items?</p>
+<p>Example:</p>
 <ul>
-  <li><a href="ordered-list-no-headings.html">Ordered list no headings</a></li>
+  <li><a href="no-aria.html">Hierarchical heading structure - no WAI-ARIA</a></li>
 </ul>
 
-
-<p>If using article elements with headings do we need to explicitly set the
-  aria-level of the heading so that the correct hierarchy is maintained?</p>
+<p>Is the fix for this to add WAI-ARIA? Is it OK to add the WAI-ARIA with javascript?</p>
 <ul>
-  <li><a href="articles-aria-level.html">Articles with aria-level</a></li>
+  <li><a href="aria-hard-coded.html">Hierarchical heading structure - hard coded WAI-ARIA</li>
+  <li><a href="aria-added-with-js.html">Hierarchical heading structure - WAI-ARIA added with Javascript</a></li>
 </ul>
 
 <h2>Outcome</h2>
 
-<p>We have decided to use an <a href="ordered-list.html">ordered list with
-  headings</a>.</p>
+
+
+
+
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   </body>
