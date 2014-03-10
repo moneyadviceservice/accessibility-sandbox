@@ -1,0 +1,95 @@
+---
+title: Heading Hierarchy - WAI-ARIA added with JavaScript
+---
+
+<h1><a href="../heading-hierachy">Heading Hierarchy</a> - WAI-ARIA added with JavaScript</h1>
+
+<h1>Main page title</h1>
+<nav>
+  <h2>Site navigation</h2>
+  <ul>
+    <li>Home</li>
+    <li><a href="⋯">Quality Assurance</a></li>
+    <li><a href="⋯">Articles Archive</a></li>
+  </ul>
+</nav>
+<section>
+  <h2>Recent Posts</h2>
+  <article>
+    <h3>HTML5 outline algorithm and headings</h3>
+    <p>
+      How to fix the bug with JAWS and the HTML5
+      outline algorithm.
+    </p>
+    <aside>
+      <h4>Publish date</h4>
+      <time datetime="2013-05-10T14:59Z">
+        Friday, 10th May 2013
+      </time>
+    </aside>
+  </article>
+  <article>
+    <h3>Handling erratic behaviour with AT</h3>
+    <p>
+      Difficulties testing with erratic AT,
+      such as when outline algorithms go bad.
+    </p>
+    <aside>
+      <h4>Views</h4>
+      <p>This article has been viewed 3.7 times</p>
+    </aside>
+  </article>
+</section>
+
+
+<!-- THIS CODE IS A HARDCODED VERSION OF THE HTML ABOVE DECORATED WITH WAI-ARIA
+AS IF IT WAS ADDED BY THE JAVASCRIPT-->
+<div class="live-example hidden">
+  <h1>Main page title</h1>
+  <nav>
+    <h2 role="header" aria-level="2">Site navigation</h2>
+    <ul>
+      <li>Home</li>
+      <li><a href="⋯">Quality Assurance</a></li>
+      <li><a href="⋯">Articles Archive</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2 role="header" aria-level="2">Recent Posts</h2>
+    <article>
+      <h3 role="header" aria-level="3">HTML5 outline algorithm and headings</h3>
+      <p>
+        How to fix the bug with JAWS and the HTML5
+        outline algorithm.
+      </p>
+      <aside>
+        <h4 role="header" aria-level="4">Publish date</h4>
+        <time datetime="2013-05-10T14:59Z">
+          Friday, 10th May 2013
+        </time>
+      </aside>
+    </article>
+    <article>
+      <h3 role="header" aria-level="3">Handling erratic behaviour with AT</h3>
+      <p>
+        Difficulties testing with erratic AT,
+        such as when outline algorithms go bad.
+      </p>
+      <aside>
+        <h4 role="header" aria-level="4">Views</h4>
+        <p>This article has been viewed 3.7 times</p>
+      </aside>
+    </article>
+  </section>
+</div>
+
+
+<script>
+
+  $(function(){
+    $("nav :header, section :header, article :header, aside :header").attr('role','heading').attr('aria-level',function() {
+      return $(this).prop('tagName').substr(-1);
+    });
+  })
+
+</script>
