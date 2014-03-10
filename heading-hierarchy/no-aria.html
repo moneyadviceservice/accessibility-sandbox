@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Heading Hierarchy</title>
+    <title>Heading Hierarchy - no WAI-ARIA</title>
     
     <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
@@ -32,37 +32,48 @@
     </script>
   </head>
   
-  <body class="heading-hierachy heading-hierachy_index">
+  <body class="heading-hierarchy heading-hierarchy_no-aria">
     <div class="l-container">
-      <h1>Heading Hierarchy</h1>
+      <h1><a href="../heading-hierarchy/">Heading Hierarchy</a> - No WAI-ARIA</h1>
 
-<h2>Questions</h2>
-
-<p>Jaw 12, 13 and 4 incorrectly report the heading level of headings inside HTML5 
-  elements such as section, article, nav and aside in IE and Firefox</p>
-
-<ul>
-  <li><a href="http://accessibleculture.org/articles/2011/10/jaws-ie-and-headings-in-html5/">JAWS, IE and Headings in HTML5</a></li>
-  <li><a href="http://juicystudio.com/article/html5-outline-algorithm-jaws.php">The HTML5 outline algorithm and JAWS</a></li>
-</ul>
-
-<p>Example:</p>
-<ul>
-  <li><a href="no-aria.html">Hierarchical heading structure - no WAI-ARIA</a></li>
-</ul>
-
-<p>Is the fix for this to add WAI-ARIA? Is it OK to add the WAI-ARIA with javascript?</p>
-<ul>
-  <li><a href="aria-hard-coded.html">Hierarchical heading structure - hard coded WAI-ARIA</li>
-  <li><a href="aria-added-with-js.html">Hierarchical heading structure - WAI-ARIA added with Javascript</a></li>
-</ul>
-
-<h2>Outcome</h2>
-
-
-
-
-
+<div class="live-example">
+  <h1>Main page title</h1>
+  <nav>
+    <h2>Site navigation</h2>
+    <ul>
+      <li>Home</li>
+      <li><a href="⋯">Quality Assurance</a></li>
+      <li><a href="⋯">Articles Archive</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Recent Posts</h2>
+    <article>
+      <h3>HTML5 outline algorithm and headings</h3>
+      <p>
+        How to fix the bug with JAWS and the HTML5
+        outline algorithm.
+      </p>
+      <aside>
+        <h4>Publish date</h4>
+        <time datetime="2013-05-10T14:59Z">
+          Friday, 10th May 2013
+        </time>
+      </aside>
+    </article>
+    <article>
+      <h3>Handling erratic behaviour with AT</h3>
+      <p>
+        Difficulties testing with erratic AT,
+        such as when outline algorithms go bad.
+      </p>
+      <aside>
+        <h4>Views</h4>
+        <p>This article has been viewed 3.7 times</p>
+      </aside>
+    </article>
+  </section>
+</div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   </body>
