@@ -1,0 +1,129 @@
+---
+title: Form errors - Form elements inside a paragraph
+---
+
+<style>
+  .is-invalid{
+    border: 2px solid red;
+  }
+  small{
+    font-size: 12px;
+    font-style: italic;
+  }
+  .notes{
+    background-color: #eee;
+    font-size: 13px;
+    font-style: italic;
+    margin: 30px;
+    padding: 20px;
+  }
+</style>
+
+<h1><a href="../form-errors/">Form errors with errors listed above form</a></h1>
+
+<p class="notes">
+  Note: For the sake of this example, the errors have been hardcoded. In the JavaScript version we would inject these dynamically. On the non-JavaScript version these would be added to the page after the form has been submitted and returned by the server, along with any necessary ARIA attributes.
+</p>
+
+<hr>
+
+<div class="live-example">
+  <form id="form" action="/">
+    <h1>Tell us your story</h1>
+
+    <h2>The form needs some attention:</h2>
+    <ol>
+      <li>
+        Please <a href="#redundancy_date">select a month</a>
+      </li>
+      <li>
+        Please <a href="#redundancy_year">select a year</a>
+      </li>
+    </ol>
+
+    <fieldset>
+      I was/will be made redundant on
+      <label for="redundancy_data">
+        <div class="form-group">
+          <span class="visually-hidden" id="label-month">Month</span>
+          <select id="redundancy_date" aria-required="true" aria-labelledby="label-month">
+            <option value="">-------</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+      </label>
+      <label for="redundancy_year">
+        <span class="visually-hidden" id="label-year">Year</span>
+        <div class="form-group">
+          <select id="redundancy_year" aria-required="true" aria-labelledby="label-year">
+            <option value="">--------</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+          </select>
+        </div>
+      </label>
+    </fieldset>
+    <input type="submit">
+  </form>
+</div>
+
+<script>
+  ;(function(window) {
+    'use strict';
+
+    var setupForm = function(){
+      var form = document.getElementById('form');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        handleFormUpdate(e, this);
+      });
+    };
+
+    var handleFormUpdate = function(e, form){
+      var selectBoxes = form.querySelectorAll('select');      
+      checkFields(selectBoxes);
+    };
+
+    var checkFields = function(fields){      
+      var nodeLen = fields.length;
+      var i = 0;
+      var $field;
+      var invalid = false;
+      for(; i < nodeLen; i++){
+        $field = $(fields[i]);
+        if( !checkField( fields[i] ) ){
+          $field
+            .attr('aria-invalid', 'true')
+            .addClass('is-invalid');
+         invalid = true;
+        }
+        else{
+          $field
+            .attr('aria-invalid', 'false')
+            .removeClass('is-invalid');
+        }
+      }
+    };
+    var checkField = function(field){
+      if(field.selectedIndex === 0){
+        return false;
+      }
+      return true;
+    };
+
+    setupForm();
+  })(window);
+</script>
