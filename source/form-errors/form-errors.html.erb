@@ -1,0 +1,121 @@
+---
+title: Form errors - Form elements inside a paragraph
+---
+
+<style>
+  .js-error-msg{
+    display: none;
+  }
+  .js-error-msg.is-invalid{
+    display: block;
+  }
+</style>
+
+<h1><a href="../form-errors/">Form errors</a></h1>
+
+<div class="live-example">
+  <form id="form" action="">
+    <label for="redundancy_date" id="redundancy_label">
+      I was/will be made redundant on
+      <div class="form-group">
+        <select id="redundancy_date" aria-describedby="error-redundancy-month" aria-labelledby="redundancy_label" aria-required="true">
+          <option value="">-------</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <div class="js-error-msg" id="error-redundancy-month" aria-hidden="true"> 
+          Please select a month
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <select aria-describedby="error-redundancy-year" aria-labelledby="redundancy_label" aria-required="true">
+          <option value="">--------</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+        </select>
+        <div class="js-error-msg" id="error-redundancy-year" aria-hidden="true"> 
+          Please select a year
+        </div>
+      </div>
+    </label>
+
+    <input type="submit">
+  </form>
+</div>
+
+<script>
+  ;(function(window) {
+    'use strict';
+
+    var setupForm = function(){
+      var form = document.getElementById('form');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        handleFormUpdate(e, this);
+      });
+    };
+
+    var handleFormUpdate = function(e, form){
+      var selectBoxes = form.querySelectorAll('select');      
+      checkFields(selectBoxes);
+    };
+
+    var checkFields = function(fields){      
+      var nodeLen = fields.length;
+      var i = 0;
+      var $errorMsg;
+      var $field;
+      var invalid = false;
+      for(; i < nodeLen; i++){
+        $errorMsg = $(fields[i]).siblings('.js-error-msg');
+        $field = $(fields[i]);
+        if( !checkField( fields[i] ) ){
+          $field.attr('aria-invalid', 'true');
+          $errorMsg
+            .addClass('is-invalid')
+            .attr({
+              'role' : 'alert',
+              'aria-hidden' : 'false'
+            });
+          invalid = true;
+        }
+        else{
+          $field.attr('aria-invalid', 'false');
+          $errorMsg
+            .removeClass('is-invalid')
+            .attr('aria-hidden', 'true')
+            .removeAttr('role');
+        }
+      }
+      if( invalid && i === nodeLen ){
+        focusFirst(fields[0]);
+      }
+    };
+
+    var focusFirst = function (field) {
+      field.focus();
+    };
+
+    var checkField = function(field){
+      if(field.selectedIndex === 0){
+        return false;
+      }
+      return true;
+    };
+
+    setupForm();
+  })(window);
+</script>
