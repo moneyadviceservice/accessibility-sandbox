@@ -4,7 +4,7 @@ This is a repository to try out markup patterns and components - etc.  Examples
 are published on GitHub Pages to can be reviewed/teest by our accessibility partner.
 
 
-[http://moneyadviceservice.github.io/accessibility-sandbox/](http://moneyadviceservice.github.io/frontend-sandbox/)
+[http://moneyadviceservice.github.io/frontend-sandbox/](http://moneyadviceservice.github.io/frontend-sandbox/)
 
 
 ##Running files locally
