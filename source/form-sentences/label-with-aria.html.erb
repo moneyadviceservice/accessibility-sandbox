@@ -1,47 +1,36 @@
 ---
-title: Form sentences - Form elements inside a fieldset using hidden field labels
+title: Form sentences - Form elements inside a paragraph using wai-aria
 ---
 
-<h1><a href="../form-sentences/">Form sentences</a> - Form elements inside a fieldset using hidden field labels</h1>
+<h1><a href="../form-sentences/">Form sentences</a> - Form elements inside a paragraph using wai-aria</h1>
 
 <div class="live-example">
-  <form action="/">
-    <h1>Tell your story</h1>
-      <fieldset>      
-        I was/will be made redundant on        
-        <div class="form-group">
-          <label for="redundancy_date">
-            <span class="visually-hidden" id="label-month">Month</span>
-            <select id="redundancy_date" aria-labelledby="label-month" aria-required="true">
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
-          </label>
-        </div>
-          
-        <div class="form-group">
-          <label for="redundancy_year">
-            <span class="visually-hidden" id="label-year">Year</span>
-            <select id="redundancy_year" aria-labelledby="label-year" aria-required="true">
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-            </select>
-          </label>
-        </div>
-
-      </fieldset>
-      <input type="submit">
-  </form>
+<form action="">
+  <h1>Tell your story</h1>
+  <p>
+    <label for="redundancy_date" id="redundancy_label">
+      I was/will be made redundant on
+      <select id="redundancy_date" aria-labelledby="redundancy_label">
+        <option value="">January</option>
+        <option value="">February</option>
+        <option value="">March</option>
+        <option value="">April</option>
+        <option value="">May</option>
+        <option value="">June</option>
+        <option value="">July</option>
+        <option value="">August</option>
+        <option value="">September</option>
+        <option value="">October</option>
+        <option value="">November</option>
+        <option value="">December</option>
+      </select>
+      <select aria-labelledby="redundancy_label">
+        <option value="">2013</option>
+        <option value="">2014</option>
+        <option value="">2015</option>
+        <option value="">2016</option>
+      </select>
+    </label>
+  </p>
+</form>
 </div>
