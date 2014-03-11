@@ -61,11 +61,11 @@
 <hr>
 
 <div class="live-example">
-  <form id="form" action="">
+  <form id="form" action="/">
     <fieldset>      
         I was/will be made redundant on
-        <label for="redundancy_data">
-          <div class="form-group">
+        <div class="form-group">
+          <label for="redundancy_date">
             <span class="visually-hidden" id="label-month">Month</span>
             <select id="redundancy_date" aria-describedby="error-redundancy-month" aria-labelledby="label-month" aria-required="true">
               <option value="">-------</option>
@@ -82,27 +82,27 @@
               <option value="November">November</option>
               <option value="December">December</option>
             </select>
-            <div class="js-error-msg" id="error-redundancy-month" aria-hidden="true"> 
+            <span class="js-error-msg" id="error-redundancy-month" aria-hidden="true"> 
               Please select a month
-            </div>
-          </div>
-        </label>
+            </span>
+          </label>
+        </div>
         
-        <label for="redundancy_year">
-          <div class="form-group">
+        <div class="form-group">
+          <label for="redundancy_year">
             <span class="visually-hidden" id="label-year">Year</span>
-            <select aria-describedby="error-redundancy-year" aria-labelledby="label-year" aria-required="true">
+            <select id="redundancy_year" aria-describedby="error-redundancy-year" aria-labelledby="label-year" aria-required="true">
               <option value="">--------</option>
               <option value="2013">2013</option>
               <option value="2014">2014</option>
               <option value="2015">2015</option>
               <option value="2016">2016</option>
             </select>
-            <div class="js-error-msg" id="error-redundancy-year" aria-hidden="true"> 
+            <span class="js-error-msg" id="error-redundancy-year" aria-hidden="true"> 
               Please select a year
-            </div>
-          </div>
-      </label>
+            </span>
+          </label>
+        </div>
     </fieldset>
 
     <input type="submit">
