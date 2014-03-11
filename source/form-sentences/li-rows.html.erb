@@ -1,16 +1,17 @@
 ---
-title: Form sentences - Form elements inside a fieldset using hidden field labels
+title: Form sentences - Form elements with hidden labels inside &lt;li&gt; rows
 ---
 
-<h1><a href="../form-sentences/">Form sentences</a> - Form elements inside a fieldset using hidden field labels</h1>
+<h1><a href="../form-sentences/">Form sentences</a> - Form elements with hidden labels inside &lt;li&gt; rows</h1>
 
 <div class="live-example">
-  <form action="/">
-    <h1>Tell your story</h1>
-      <fieldset>      
-        I was/will be made redundant on        
+<form action="">
+  <h1>Tell your story</h1>
+    <ol>
+      <li class="row">
         <div class="form-group">
           <label for="redundancy_date">
+            I was/will be made redundant on
             <span class="visually-hidden" id="label-month">Month</span>
             <select id="redundancy_date" aria-labelledby="label-month" aria-required="true">
               <option value="January">January</option>
@@ -27,9 +28,6 @@ title: Form sentences - Form elements inside a fieldset using hidden field label
               <option value="December">December</option>
             </select>
           </label>
-        </div>
-          
-        <div class="form-group">
           <label for="redundancy_year">
             <span class="visually-hidden" id="label-year">Year</span>
             <select id="redundancy_year" aria-labelledby="label-year" aria-required="true">
@@ -41,7 +39,38 @@ title: Form sentences - Form elements inside a fieldset using hidden field label
           </label>
         </div>
 
-      </fieldset>
-      <input type="submit">
-  </form>
+      </li>
+
+      <li class="row">
+        <div class="form-group">
+          <label for="redundancy_no">
+            The company made 
+            <select id="redundancy_no" aria-required="true">
+              <option value="">10+</option>
+              <option value="" selected>100+</option>
+              <option value="">200+</option>
+              <option value="">300+</option>
+            </select>
+            people redundant
+          </label>
+        </div>
+      </li>
+
+      <li class="row">
+        <div class="form-group">
+          <label for="redundancy_package">
+            I
+            <select id="redundancy_package" aria-required="true">
+              <option value="">do know</option>
+              <option value="" selected>don't know</option>
+            </select>
+             what my redundancy package will be
+          </label>
+        </div>
+      </li>
+
+    </ol>
+
+    <input type="submit">
+</form>
 </div>
