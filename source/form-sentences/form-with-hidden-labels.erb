@@ -1,0 +1,206 @@
+---
+title: Form sentences - Form elements with hidden labels
+---
+
+<style>
+  .js-error-msg{
+    display: none;
+  }
+  .js-error-msg.is-invalid{
+    display: block;
+  }
+  select.is-invalid{
+    border: 2px solid red;
+  }
+  .notes{
+    background-color: #eee;
+    font-size: 13px;
+    font-style: italic;
+    margin: 30px;
+    padding: 20px;
+  }
+</style>
+
+<h1><a href="../form-sentences/">Form sentences</a> - Form elements with hidden labels</h1>
+
+<div class="live-example">
+<form id="form" action="">
+  <h1>Tell your story</h1>
+    <ol>
+
+      <li class="row">
+        
+        <div>
+          <label for="redundancy-date" id="label-redundancy-date">
+            I was/will be made redundant on
+          </label>
+          <span class="visually-hidden" id="label-redundancy-month">
+            Month
+          </span>
+          <select id="redundancy-date" aria-labelledby="label-redundancy-month" data-describedby="error-redundancy-month" aria-required="true">
+            <option value=""></option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+          <span class="js-error-msg" id="error-redundancy-month" aria-hidden="true"> 
+            Please select a month
+          </span>
+        </div>
+        
+        <div>
+          <label class="visually-hidden" for="redundancy-year" id="label-redundancy-year">
+            Year
+          </label>
+          <select id="redundancy-year" aria-labelledby="label-redundancy-year" data-describedby="error-redundancy-year" aria-required="true">
+            <option></option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+          </select>
+          <span class="js-error-msg" id="error-redundancy-year" aria-hidden="true"> 
+            Please select a year
+          </span>
+        </div>
+      </li>
+
+      <li class="row">
+        <label for="redundancy-no" id="label-redundancy-no-pt1">
+          The company made
+        <select id="redundancy-no" aria-labelledby="label-redundancy-no-pt1 label-redundancy-no-pt2">
+          <option value="">10+</option>
+          <option value="" selected>100+</option>
+          <option value="">200+</option>
+          <option value="">300+</option>
+        </select>
+        </label>
+        <span id="label-redundancy-no-pt2">people redundant</span>
+      </li>
+
+      <li class="row">
+        <label for="redundancy-package" id="label-redundancy-package-pt1">
+          I
+          <select id="redundancy-package" aria-labelledby="label-redundancy-package-pt1 label-redundancy-package-pt2" data-describedby="error-redundancy-package" aria-required="true">
+            <option value=""></option>
+            <option value="">do know</option>
+            <option value="">don't know</option>
+          </select>
+        </label>
+        <span id="label-redundancy-package-pt2">what my redundancy package will be</span>
+        <span class="js-error-msg" id="error-redundancy-package" aria-hidden="true"> 
+          Please select an option
+        </span>
+      </li>
+
+      <li class="row">
+        <label for="salary" id="label-salary-pt1">
+          My salary is
+          <input type="number" id="salary" aria-labelledby="label-salary-pt1" data-describedby="error-salary" aria-required="true">
+        </label>
+        <label id="label-salary" class="visually-hidden">Salary frequency</label>
+        <select id="salary-frequency" aria-labelledby="label-salary" data-describedby="error-salary" aria-required="true">
+          <option value=""></option>
+          <option value="">per year</option>
+          <option value="">per month</option>
+        </select>
+        <span class="js-error-msg" id="error-salary" aria-hidden="true"> 
+          Please select a salary
+        </span>
+      </li>
+
+    </ol>
+
+    <input type="submit">
+</form>
+</div>
+
+<script>
+  ;(function(window) {
+    'use strict';
+
+    var setupForm = function(){
+      var form = document.getElementById('form');
+      var selectBoxes = form.querySelectorAll('select[aria-required="true"]');
+      var handleFormUpdate = function (e, fields) {
+        e.preventDefault();
+        checkForm(e, fields);
+      };
+
+      form.addEventListener('submit', function(e){
+        handleFormUpdate(e, selectBoxes);
+      });
+    };
+
+    var checkForm = function(e, fields){
+      checkFields(fields);
+    };
+
+    var checkFields = function(fields){      
+      var nodeLen = fields.length;
+      var i = 0;
+      var $errorMsg;
+      var $field;
+      var invalid = false;
+      for(; i < nodeLen; i++){
+        $errorMsg = $(fields[i]).siblings('.js-error-msg');
+        $field = $(fields[i]);
+        if( !checkField( fields[i] ) ){
+          $field
+            .attr('aria-invalid', 'true')
+            .attr('aria-describedby', $field.data('describedby') )
+            .addClass('is-invalid')
+          $errorMsg
+            .addClass('is-invalid')
+            .attr({
+              'role' : 'alert',
+              'aria-hidden' : 'false'
+            });
+          invalid = true;
+        }
+        else{
+          $field
+            .attr('aria-invalid', 'false')
+            .removeAttr('aria-describedby')
+            .removeClass('is-invalid')
+
+            console.log($errorMsg);
+          $errorMsg
+            .removeClass('is-invalid')
+            .attr('aria-hidden', 'true')
+            .removeAttr('role');
+        }
+      }
+      if( invalid && i === nodeLen ){
+        focusFirst(fields[0]);
+      }
+    };
+
+    var focusFirst = function (field) {
+      field.focus();
+    };
+
+    var addARIA = function(field) {
+      var $field = $(field);
+      $field.attr()
+    };
+
+    var checkField = function(field){
+      if(field.selectedIndex === 0){
+        return false;
+      }
+      return true;
+    };
+
+    setupForm();
+  })(window);
+</script>
