@@ -215,9 +215,9 @@
         <option value="1997">1997</option>
         <option value="1998">1998</option></select>
 
-      <div class="msg" role="alertdialog">
-        <label class="msg-validation msg-invalid" for="dob-day">Invalid</label>
-        <label class="msg-validation msg-required" for="dob-day">Please enter your date of birth</label>
+      <div class="msg">
+        <label class="msg-validation msg-invalid" for="dob-day" role="alert">Please enter a valid date of birth</label>
+        <label class="msg-validation msg-required" for="dob-day" role="alert">Please enter your date of birth</label>
       </div>
     </div>
 
@@ -225,9 +225,9 @@
       <label class="field-label field-label--required field-label--vertical" for="salary">What is your gross salary?</label>
       £<input aria-required="true" class="valid" id="salary" name="salary" pattern="\d+(\.\d{2})?" placeholder="0,000.00" required="required" type="text" value="">
 
-      <div class="msg" role="alertdialog">
-        <label class="msg-validation msg-invalid" for="salary">Please enter a currency value</label>
-        <label class="msg-validation msg-required" for="salary">Please enter your gross salary</label>
+      <div class="msg">
+        <label class="msg-validation msg-invalid" for="salary" role="alert">Please enter a currency value</label>
+        <label class="msg-validation msg-required" for="salary" role="alert">Please enter your gross salary</label>
       </div>
     </div>
     <div class="frm-info frm-info--gender">
@@ -237,8 +237,8 @@
       <input aria-labelled-by="lbl-gender lbl-gender-female" aria-required="true" class="valid" id="gender-female" name="gender" type="radio" value="female" required>
       <label class="label-left" id="lbl-gender-male" for="gender-male">Male</label>
       <input aria-labelled-by="lbl-gender lbl-gender-male" aria-required="true" class="invalid" id="gender-male" name="gender" type="radio" value="male" required>
-      <div class="msg" role="alertdialog">
-        <label class="msg-validation msg-required" for="gender-female">Please indicate your gender</label>
+      <div class="msg">
+        <label class="msg-validation msg-required" for="gender-female" role="alert">Please indicate your gender</label>
       </div>
     </div>
 
