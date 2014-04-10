@@ -15,12 +15,6 @@ Clone the repository:
 git clone git@github.com:moneyadviceservice/frontend-sandbox.git
 ```
 
-Install middleman:
-	
-```sh
-gem install middleman
-```
-
 Navigate to the project folder
 
 ```sh
@@ -36,7 +30,7 @@ bundle install
 Run middleman server
 
 ```sh
-middleman server
+bundle exec middleman server
 ```
 
 You can view the site at: [http://0.0.0.0:4567/](http://0.0.0.0:4567/)
