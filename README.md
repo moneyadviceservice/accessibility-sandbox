@@ -11,50 +11,52 @@ are published on GitHub Pages to can be reviewed/teest by our accessibility part
 
 Clone the repository:
 
-```
+```sh
 git clone git@github.com:moneyadviceservice/frontend-sandbox.git
 ```
 
 Install middleman:
 	
-```
+```sh
 gem install middleman
 ```
 
 Navigate to the project folder
 
-```
+```sh
 cd frontend-sandox
 ```
 
 Make sure all dependencies are available to the application:
 
-```
+```sh
 bundle install
 ```
 
 Run middleman server
 
-```
+```sh
 middleman server
 ```
 
 You can view the site at: [http://0.0.0.0:4567/](http://0.0.0.0:4567/)
 
 
-##To deploy to github pages
+## To deploy to github pages
 
-Commit your changes to master
+Commit your changes to master:
 
+```sh
+git add .
+git commit "{insert commit message}"
+git push
 ```
-    git add .
-    git commit "{insert commit message}"
-    git push
+
+Run rake task to publish to the gh-pages branch:
+
+```sh
+rake publish
 ```
-
-Run rake task to publish to the gh-pages branch
-
-    rake publish
 
 (note: if you have not commited changes to master you will get an error message!)
 
