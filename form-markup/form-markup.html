@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Middleman</title>
+
+    <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+
+      <style>
+    fieldset {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    .form__item label {
+      display:block;
+    }
+
+    legend {
+      font-weight:bold;
+      color:green;
+    }
+
+    .inline * {
+      display:inline;
+    }
+
+    .form__hint {
+      color:#666;
+      margin-top:0;
+    }
+  </style>
+
+  </head>
+
+  <body class="form-markup form-markup_form-markup">
+    <div class="l-container">
+      
+<div class="live-example">
+  <h1>Questionnaire</h1>
+
+  <p>Required fields are followed by *</p>
+
+  <form class="form">
+
+    <h2>About you</h2>
+    <fieldset>
+
+      <p class="form__item">
+        <label for="first-name">First name</label>
+        <input id="first-name" type="text" />
+      </p>
+
+      <p class="form__item">
+        <label for="email">Email address *
+          <span class="visually-hidden">required</span>
+        </label>
+        <input id="email" type="email" />
+      </p>
+
+      <div class="form__item">
+        <label for="password">Password *
+          <span class="visually-hidden">required</span>
+        </label>
+        <input id="password" type="password" required="required"
+               aria-required="true" aria-describedby="first-name-hint"/>
+        <p class="form__hint" id="first-name-hint">At least 8 characters</p>
+      </div>
+
+      <p class="form__item">
+        <label for="savings">How much do you save a month?</label>
+        <input id="savings" placeholder="£" type="number" />
+      </p>
+
+      <p class="form__item">
+        <label for="saving-proportion">What proportion of your next income do
+          you save?</label>
+        <input id="saving-proportion" placeholder="%" type="number" />
+      </p>
+
+      <fieldset>
+        <legend>
+          <span>Gender</span>
+        </legend>
+        <p class="inline">
+          <label for="male">
+            <input id="male" type="radio" name="gender">
+            Male
+          </label>
+          <label for="female">
+            <input id="female" type="radio" name="gender">
+            Female
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          <span>Do you own any of the following?</span>
+        </legend>
+        <p>
+          <label for="house">
+            <input id="house" type="checkbox" name="own">
+            House
+          </label>
+        </p>
+        <p>
+          <label for="car">
+            <input id="car" type="checkbox" name="own">
+            Car
+          </label>
+        </p>
+        <p>
+          <label for="motorbike">
+            <input id="motorbike" type="checkbox" name="own">
+            Motorbike
+          </label>
+        </p>
+      </fieldset>
+
+      <p class="form__item">
+        <label for="county">County</label>
+        <select id="day">
+          <option value="1">Aberdeen City</option>
+          <option value="2" selected>Berkshire</option>
+          <!-- Other options go here -->
+        </select>
+      </p>
+
+      <fieldset>
+        <legend aria-describedby="dob-hint">
+          <span>Date of birth</span>
+        </legend>
+
+        <div class="inline">
+          <p>
+            <label for="day" class="visually-hidden">Day</label>
+            <select id="day">
+              <option value="Day">Day</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+          <p>
+            <label for="month" class="visually-hidden">Month</label>
+            <select id="month">
+              <option value="Month">Month</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+          <p>
+            <label for="year" class="visually-hidden">Year</label>
+            <select id="year">
+              <option value="Year">Year</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+        </div>
+
+        <p id="dob-hint">So we can provide you with age-related advice</p>
+
+      </fieldset>
+
+
+
+      <p>
+        <input id="newsletter" type="checkbox" name="newsletter" value="1">
+        <label for="newsletter">I wish to subscribe to the free newsletter</label>
+      </p>
+
+      <p>
+        <input id="terms" type="checkbox" name="toppings" value="1">
+        <label for="terms">I agree to the
+          <a href="/terms-and-conditions">terms and conditions</a>
+        </label>
+      </p>
+      <p>We will never share your personal data with any third party.<br />
+        You information is private and confidential
+        <a href="/privacy">Our private policy</a>.
+      </p>
+
+      <a href="/resume">No I'll enter these details later</a>
+
+      <input class="button" type="submit" value="Save">
+    </fieldset>
+
+  </form>
+</div>
+
+    </div>
+
+    <script src="../javascripts/all.js" type="text/javascript"></script>
+    <script async="async" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script async="async" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // Add a markup block after each live example container
+        $('.live-example').after("<div class='markup'></div>");
+
+        // Fill the markup block with the code from the live container
+        $('.live-example').each(function () {
+          $(this).next($('.markup')).text($(this).html());
+        });
+
+        // Wrap the code in the markup block with a <pre> tag for prettyprinting
+        $('.markup').wrapInner('<pre class="prettyprint" />');
+
+        prettyPrint();
+      })
+    </script>
+  </body>
+</html>
