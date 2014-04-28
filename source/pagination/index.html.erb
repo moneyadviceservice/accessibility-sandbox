@@ -4,7 +4,7 @@
 
 <div class="pagination-container">
 
-  <p class="visually-hidden" id="pagination">Pagination to navigate between search results pages</p>
+  <p class="visually-hidden" id="pagination">Search Results Pagination</p>
 
   <ol aria-describedby="pagination" role="navigation" class="pagination unstyled-list">
     <li class="pagination__item">
@@ -27,10 +27,8 @@
     </li>
 
     <li class="pagination__item is-selected">
-      <a href="">
-        <span class="visually-hidden">Page</span> 3
-        <span class="visually-hidden">(current page)</span>
-      </a>
+      <span class="visually-hidden">Page</span> 3
+      <span class="visually-hidden">(current page)</span>
     </li>
 
     <li class="pagination__item">
@@ -51,7 +49,7 @@
       </a>
     </li>
 
-    <li class="pagination__item is-selected">
+    <li class="pagination__item">
       <a href="">
         <span class="visually-hidden">Page</span> 7
       </a>
@@ -81,4 +79,33 @@
         <span class="visually-hidden">Page</span>
       </a>
     </li>
+
+     <p class="pagination__counter">(<span class="visually-hidden">Page </span>3 of 10)</p>
+</div>
+
+
+<div class="pagination-container">
+  <a href="">
+    Previous
+    <span class="visually-hidden">Page</span>
+  </a>
+  &nbsp;<span class="pagination__counter"><span class="visually-hidden">Page </span>1 of 3</span>&nbsp;
+  <a href="">
+    Next
+    <span class="visually-hidden">Page</span>
+  </a>
+</div>
+
+
+<div class="pagination-container">
+    <a href="">
+      &lt;
+      <span class="visually-hidden">Previous Page</span>
+    </a>
+      &nbsp;
+    <a href="">
+      &gt;
+      <span class="visually-hidden">Next Page</span>
+    </a>
+    <span class="pagination__counter"><span class="visually-hidden">Page </span>1 of 3</span>
 </div>

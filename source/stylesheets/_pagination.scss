@@ -1,25 +1,30 @@
 .pagination-container {
-margin: 48px 0 0 0;
+  margin: 48px 0 0 0;
+  text-align: center;
 }
 
 .pagination__item {
   display: inline-block;
+  padding: 12px;
 
   a {
     color: #43811E;
-    padding: 12px;
     text-decoration: none;
   }
 
   &.is-selected {
     font-weight: bold;
-    a {
-      color: #6d6d6d;
-    }
+    color: #6d6d6d;
   }
 }
 
 .pagination__ellipsis {
   letter-spacing: -1px;
   margin-left: 12px;
+}
+
+.pagination__counter {
+  text-align: center;
+  font-weight: 300;
+  color: lighten(#6d6d6d, 20%);
 }
