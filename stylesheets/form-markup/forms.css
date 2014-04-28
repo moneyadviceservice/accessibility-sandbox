@@ -1,0 +1,39 @@
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.form__item label {
+  display:block;
+}
+
+legend {
+  font-weight:bold;
+  color:green;
+}
+
+.inline * {
+  display:inline;
+}
+
+.form__hint {
+  color:#666;
+  margin-top:0;
+}
+
+
+.form__error-list {
+  border: 2px solid red;
+  padding:12px;
+}
+
+.form__validation-message {
+  color:red;
+}
+.is-form-error {
+  border-left:4px solid red;
+  padding-left:6px;
+}
