@@ -37,7 +37,7 @@ legend {
   display:inline;
 }
 
-.form__error-list {
+.form__error-summary {
   border: 2px solid red;
   padding:12px;
 }
