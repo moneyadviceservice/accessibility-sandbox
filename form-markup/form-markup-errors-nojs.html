@@ -39,20 +39,20 @@
 
       <p class="form__item is-form-error">
         <span class="form__validation-message" id="error1">1. Enter your first name</span>
-        <label for="first-name">First name</label>
+        <label for="first-name" class="form__label-heading">First name</label>
         <input id="first-name" type="text" aria-invalid="true" />
       </p>
 
       <p class="form__item is-form-error">
         <span class="form__validation-message" id="error2">2. Re-type your email address</span>
-        <label for="email">Email address *
+        <label for="email" class="form__label-heading">Email address *
           <span class="visually-hidden">required</span>
         </label>
         <input id="email" type="email" aria-invalid="true" />
       </p>
 
       <div class="form__item">
-        <label for="password">Password *
+        <label for="password" class="form__label-heading">Password *
           <span class="visually-hidden">required</span>
         </label>
         <input id="password" type="password" required="required"
@@ -61,12 +61,12 @@
       </div>
 
       <p class="form__item">
-        <label for="savings">How much do you save a month?</label>
+        <label for="savings" class="form__label-heading">How much do you save a month?</label>
         <input id="savings" placeholder="£" type="number" />
       </p>
 
       <p class="form__item">
-        <label for="saving-proportion">What proportion of your income do
+        <label for="saving-proportion" class="form__label-heading">What proportion of your income do
           you save?</label>
         <input id="saving-proportion" placeholder="%" type="number" />
       </p>
@@ -75,7 +75,7 @@
         <legend>
           <span>Gender</span>
         </legend>
-        <p class="inline">
+        <p class="form__inline-group">
           <label for="male">
             <input id="male" type="radio" name="gender">
             Male
@@ -112,7 +112,7 @@
       </fieldset>
 
       <p class="form__item">
-        <label for="county">County</label>
+        <label for="county" class="form__label-heading">County</label>
         <select id="day">
           <option value="1">Aberdeen City</option>
           <option value="2" selected>Berkshire</option>
@@ -125,7 +125,7 @@
           <span>Date of birth</span>
         </legend>
 
-        <div class="inline">
+        <div class="form__inline-group">
           <p>
             <label for="day" class="visually-hidden">Day</label>
             <select id="day">
@@ -154,7 +154,7 @@
       </fieldset>
 
       <p class="form__item">
-        <label for="textarea">Please leave a comment</label>
+        <label for="textarea" class="form__label-heading">Please leave a comment</label>
         <textarea id="textarea"></textarea>
       </p>
 
@@ -182,6 +182,7 @@
 
   </form>
 </div>
+
 
     </div>
 
