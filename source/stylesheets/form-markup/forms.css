@@ -6,23 +6,29 @@ fieldset {
   font: inherit;
   vertical-align: baseline;
 }
-.form__item label {
-  display:block;
-}
-
 legend {
   font-weight:bold;
   color:green;
 }
 
-.inline,
-.inline * {
-  display:inline;
+
+.form__item {
+  overflow:hidden;
+  margin-bottom:1em;
+}
+.form__label-heading {
+  display:block;
+}
+
+.form__inline-group,
+.form__inline-group * {
+  display:inline-block;
 }
 
 .form__hint {
   color:#666;
   margin-top:0;
+  margin-bottom:0;
 }
 
 .form__extra-info {
@@ -39,6 +45,8 @@ legend {
 .form__validation-message {
   color:red;
 }
+
+/* ---------- STATE ---------- */
 .is-form-error {
   border-left:4px solid red;
   padding-left:6px;
