@@ -1,9 +1,12 @@
 <h1>Pagination</h1>
 
-<p>Options for an accessible pagination module</p>
+<p>Option for an accessible pagination module</p>
 
 <div class="pagination-container">
-  <ol role="navigation" class="pagination unstyled-list">
+
+  <p class="visually-hidden" id="pagination">Pagination to navigate between search results pages</p>
+
+  <ol aria-describedby="pagination" role="navigation" class="pagination unstyled-list">
     <li class="pagination__item">
       <a href="">
         Previous
