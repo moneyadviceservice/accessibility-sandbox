@@ -15,6 +15,7 @@ legend {
   color:green;
 }
 
+.inline,
 .inline * {
   display:inline;
 }
@@ -24,6 +25,11 @@ legend {
   margin-top:0;
 }
 
+.form__extra-info {
+  border-left:4px solid blue;
+  padding-left:6px;
+  display:inline;
+}
 
 .form__error-list {
   border: 2px solid red;
