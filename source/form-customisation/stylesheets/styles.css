@@ -48,6 +48,8 @@
     width: 100%;
     -webkit-transition: border .3s, color .3s;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     /* Hides arrow in Firefox (27+), down to 60% */
     text-indent: 5px;
