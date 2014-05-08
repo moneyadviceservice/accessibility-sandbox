@@ -4,27 +4,25 @@
           box-sizing: border-box;
 }
 
-.fieldset {
-  border: none;
-  margin: 10px 0;
-  padding: 0;
-}
-
-.fieldset--col3 {
-  margin-left: -10px;
-}
-
-  .fieldset--col3 .fieldset__col {
-    float: left;
-    padding-left: 10px;
-    width: 33.333333%;
-  }
-
-
-
 .form {
   margin: 0 auto;
 }
+
+  .fieldset {
+    border: none;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .fieldset--col3 {
+    margin-left: -10px;
+  }
+
+    .fieldset--col3 .fieldset__col {
+      float: left;
+      padding-left: 10px;
+      width: 33.333333%;
+    }
 
   .label {
     cursor: pointer;
@@ -89,7 +87,8 @@
     position: absolute;
     right: 15px;
     top: 50%;
-    -webkit-transition: all .3s;
+    -webkit-transition: border .3s;
+    -moz-transition: border .3s;
   }
 
   .select-wrap--ex2:hover:after {
