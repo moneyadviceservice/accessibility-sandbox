@@ -1,0 +1,104 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fieldset {
+  border: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.fieldset--col3 {
+  margin-left: -10px;
+}
+
+  .fieldset--col3 .fieldset__col {
+    float: left;
+    padding-left: 10px;
+    width: 33.333333%;
+  }
+
+
+
+.form {
+  margin: 0 auto;
+}
+
+  .label {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .select {
+    background: #fff;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    color: #777;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    height: 40px;
+    line-height: 1;
+    padding: 5px 35px 5px 5px;
+    position: relative;
+    width: 100%;
+    -webkit-transition: border .3s, color .3s;
+    -webkit-appearance: none;
+
+    /* Hides arrow in Firefox (27+), down to 60% */
+    text-indent: 5px;
+    text-overflow: "";
+  }
+
+  .select:focus,
+  .select:hover {
+    border-color: #69c333;
+    color: #000;
+  }
+
+  /* Hides dropdown arrow on IE11 */
+  .select::-ms-expand  {
+    display: none;
+  }
+
+
+  .select--ex1 {
+    background: #fff url(../images/select-arrow.png) right 50% no-repeat;
+  }
+
+  .select-wrap {
+    display: block;
+    position: relative;
+  }
+
+  .select-wrap--ex2:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #bbb transparent transparent transparent;
+    display: block;
+    margin-top: -3px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transition: all .3s;
+  }
+
+  .select-wrap--ex2:hover:after {
+    border-color: #388426  transparent transparent transparent;
+  }
+
+
+  /* Hides the custom arrow dropdown */
+  .ie7 .select, .ie8 .select, .ie9 .select {
+    background: #fff;
+    padding: 10px;
+    height: auto;
+    line-height: 50px;
+  }

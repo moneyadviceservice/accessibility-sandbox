@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="stylesheets/styles.css">
+
+<form class="form" action="">
+  <h1>Custom select box</h1>
+
+  <h2>Example 2</h2>
+  <p>
+    Uses <code>appearance: none;</code> to hide default browse chrome
+    then uses a wrapper element with a <code>:after</code> pseudo for the arrow icon.
+  </p>
+  <label class="label" for="custom-1">My custom select</label>
+  <span class="select-wrap select-wrap--ex2">
+    <select class="select select--ex2" id="custom-1">
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>Item 3</option>
+      <option>Item 4</option>
+      <option>Item 5</option>
+    </select>
+  </span>
+
+  <label class="label" for="custom-2">In columns</label>
+  <fieldset class="fieldset fieldset--col3">
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+  </fieldset>
+
+  <p>
+    <b>Support:</b>
+    <ul>
+      <li>Chrome</li>
+      <li>Chrome Android</li>
+      <li>Safari</li>
+      <li>Mobile Safari</li>
+      <li>Firefox Latest (Down arrow appears again at 60% zoom)</li>
+      <li>IE10 &amp; 11</li>
+    </ul>
+  </p>
+</form>
