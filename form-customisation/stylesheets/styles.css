@@ -89,6 +89,7 @@
     top: 50%;
     -webkit-transition: border .3s;
     -moz-transition: border .3s;
+    transition: border .3s;
   }
 
   .select-wrap--ex2:hover:after {
