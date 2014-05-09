@@ -188,6 +188,8 @@
   height: 100%;
   width: 100%;
   -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  transform: scale(.5);
 }
 
 .input-custom:not(#foo) .input-custom__icon:before,
@@ -199,6 +201,8 @@
 .input-custom:not(#foo).input-custom--l .input-custom__icon:before,
 .input-custom:not(#foo).input-custom--l .input-custom__icon:after{
   -webkit-transition: border .3s;
+  -moz-transition: border .3s;
+  transition: border .3s;
 }
 
 .input-custom:not(#foo).input-custom--l .input-custom__label,
@@ -211,6 +215,8 @@
 .input-custom:not(#foo) .input-custom__label:hover > .input-custom__icon{
   border-color: #388426;
   -webkit-transition: border .3s;
+  -moz-transition: border .3s;
+  transition: border .3s;
 }
 
 .input-custom:not(#foo) input:checked ~ .input-custom__label > .input-custom__icon:after{
