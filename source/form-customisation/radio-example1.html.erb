@@ -1,20 +1,20 @@
 ---
-title: Custom checkbox
+title: Custom radio
 ---
 <link rel="stylesheet" href="stylesheets/styles.css">
 
 <form class="form" action="">
-  <h1>Custom checkbox</h1>
+  <h1>Custom radio</h1>
 
   <h2>Example 1</h2>
   <p>
-    Hides the browser native checkbox and displays a custom checkbox.
-    Uses the CSS3 general sibling <code>~</code> and <code>:checked</code> selectors to toggle the checkbox without JavaScript.
+    Hides the browser native radio and displays a custom radio.
+    Uses the CSS3 general sibling <code>~</code> and <code>:checked</code> selectors to toggle the radio without JavaScript.
   </p>
 
   <fieldset class="fieldset">
-    <span class="input-custom input-custom--checkbox">
-      <input aria-checked="false" name="something1" id="something1" type="checkbox" value="1">
+    <span class="input-custom input-custom--radio">
+      <input aria-checked="false" name="something" id="something1" type="radio" value="1">
       <label class="input-custom__label" for="something1">
         <span class="input-custom__copy">
           I have read this
@@ -23,8 +23,8 @@ title: Custom checkbox
       </label>
     </span>
 
-    <span class="input-custom input-custom--checkbox">
-      <input aria-checked="false" name="something2" id="something2" type="checkbox" value="1">
+    <span class="input-custom input-custom--radio">
+      <input aria-checked="false" name="something" id="something2" type="radio" value="1">
       <label class="input-custom__label" for="something2">
         <span class="input-custom__icon"></span>
         <span class="input-custom__copy">
@@ -33,8 +33,8 @@ title: Custom checkbox
       </label>
     </span>
 
-    <span class="input-custom input-custom--checkbox input-custom--l">
-      <input aria-checked="false" name="something3" id="something3" type="checkbox" value="1">
+    <span class="input-custom input-custom--radio input-custom--l">
+      <input aria-checked="false" name="something" id="something3" type="radio" value="1">
       <label class="input-custom__label" for="something3">
         <span class="input-custom__icon"></span>
         <span class="input-custom__copy">
@@ -46,7 +46,7 @@ title: Custom checkbox
 
   <h3>Support</h3>
 
-  <p>Supported in all CSS3-capable browsers. Displays a standard checkbox component in non-supporting browsers.</p>
+  <p>Supported in all CSS3-capable browsers. Displays a standard radio component in non-supporting browsers.</p>
 
   <ul>
     <li>Chrome</li>
