@@ -219,6 +219,15 @@
   transition: border .3s;
 }
 
+.input-custom:not(#foo) input:focus ~ .input-custom__label > .input-custom__icon {
+  border-color: #666;
+  border-style: dotted;
+}
+
+/*.input-custom:not(#foo) input:focus ~ .input-custom__label > .input-custom__icon {
+  outline: 1px solid blue;
+}*/
+
 .input-custom:not(#foo) input:checked ~ .input-custom__label > .input-custom__icon:after{
   visibility: visible;
 }
