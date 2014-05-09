@@ -1,0 +1,65 @@
+---
+title: Custom radio box
+---
+<link rel="stylesheet" href="stylesheets/styles.css">
+
+<form class="form" action="">
+  <h1>Custom radio</h1>
+
+  <h2>Example 1</h2>
+  <p>
+    Hides the browser native checkbox and displays a custom checkbox.
+    Uses the CSS3 general sibling <code>~</code> and <code>:checked</code> selectors to toggle the checkbox without JavaScript.
+  </p>
+
+  <fieldset class="fieldset">
+    <span class="form-checkbox">
+      <input aria-checked="false" name="something1" id="something1" type="checkbox" value="1">
+      <label class="form-checkbox__label" for="something1">
+        <span class="form-checkbox__copy">
+          I have read this
+        </span>
+        <span class="form-checkbox__icon"></span>
+      </label>
+    </span>
+
+    <span class="form-checkbox">
+      <input aria-checked="false" name="something2" id="something2" type="checkbox" value="1">
+      <label class="form-checkbox__label" for="something2">
+        <span class="form-checkbox__icon"></span>
+        <span class="form-checkbox__copy">
+          I have read this
+        </span>
+      </label>
+    </span>
+
+    <span class="form-checkbox form-checkbox--l">
+      <input aria-checked="false" name="something3" id="something3" type="checkbox" value="1">
+      <label class="form-checkbox__label" for="something3">
+        <span class="form-checkbox__icon"></span>
+        <span class="form-checkbox__copy">
+          I have read this
+        </span>
+      </label>
+    </span>
+  </fieldset>
+
+  <h3>Support</h3>
+
+  <p>Supported in all CSS3-capable browsers. Displays a standard checkbox component in non-supporting browsers.</p>
+
+  <ul>
+    <li>Chrome</li>
+    <li>Chrome Android</li>
+    <li>Safari</li>
+    <li>Mobile Safari</li>
+    <li>Opera</li>
+    <li>Firefox</li>
+    <li>IE9/10/11</li>
+  </ul>
+
+  <h3>Accessibility</h3>
+  <p>
+    It provides the same accessibility as a standard component.
+  </p>
+</form>
