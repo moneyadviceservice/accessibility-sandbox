@@ -104,3 +104,91 @@
     height: auto;
     line-height: 50px;
   }
+
+
+
+/* Custom checkbox */
+.form-checkbox {
+  display: block;
+  margin-bottom: 30px;
+}
+.form-checkbox:not(#foo) input[type='checkbox']{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__label{
+  cursor: pointer;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__copy,
+.form-checkbox:not(#foo) .form-checkbox__icon{
+  vertical-align: middle;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__icon{
+  display: inline-block;
+  position: relative;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__icon:before{
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 0 19px rgba(0,0,0,.1);
+  float: right;
+}
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__icon:before,
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__icon:before{
+  border-width: 3px;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__icon:after{
+  background: url(../images/tick-icon.png) center center no-repeat;
+  background-size: 50% 50%;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  visibility: hidden;
+}
+
+.form-checkbox:not(#foo) .form-checkbox__icon:before,
+.form-checkbox:not(#foo) .form-checkbox__icon:after{
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__icon:before,
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__icon:after{
+  height: 40px;
+  width: 40px;
+  -webkit-transition: border .3s;
+}
+
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__label,
+.form-checkbox:not(#foo).form-checkbox--l .form-checkbox__label{
+  color: #388426;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-checkbox:not(#foo) input:checked ~ .form-checkbox__label > .form-checkbox__icon:before,
+.form-checkbox:not(#foo) .form-checkbox__label:hover > .form-checkbox__icon:before{
+  border-color: #388426;
+  -webkit-transition: border .3s;
+}
+
+.form-checkbox:not(#foo) input:checked ~ .form-checkbox__label > .form-checkbox__icon:after{
+  visibility: visible;
+}
+
+.form-checkbox:not(#foo).has-error .form-checkbox__icon:before{
+  border-color: #388426;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Custom select box example 2</title>
+
+    <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+
+    
+  </head>
+
+  <body class="form-customisation form-customisation_select-example2">
+    <div class="l-container">
+      <link rel="stylesheet" href="stylesheets/styles.css">
+
+<form class="form" action="">
+  <h1>Custom select box</h1>
+
+  <h2>Example 2</h2>
+  <p>
+    Uses <code>appearance: none;</code> to hide default browse chrome
+    then uses a wrapper element with a <code>:after</code> pseudo for the arrow icon.
+  </p>
+  <label class="label" for="custom-1">My custom select</label>
+  <span class="select-wrap select-wrap--ex2">
+    <select class="select select--ex2" id="custom-1">
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>Item 3</option>
+      <option>Item 4</option>
+      <option>Item 5</option>
+    </select>
+  </span>
+
+  <label class="label" for="custom-2">In columns</label>
+  <fieldset class="fieldset fieldset--col3">
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+    <div class="fieldset__col">
+      <span class="select-wrap select-wrap--ex2">
+        <select class="select select--ex2" id="custom-1">
+          <option>1</option>
+          <option>2</option>
+          <option selected="selected">3</option>
+          <option>4</option>
+        </select>
+      </span>
+    </div>
+  </fieldset>
+
+  <h3>Support</h3>
+  <p>Supported in most CSS3-capable browsers. Displays a standard select box component in non-supporting browsers.</p>
+  <ul>
+    <li>Chrome</li>
+    <li>Chrome Android</li>
+    <li>Safari</li>
+    <li>Mobile Safari</li>
+    <li>Opera</li>
+    <li>Firefox Latest (Down arrow appears again at 60% zoom)</li>
+    <li>IE10 &amp; 11</li>
+  </ul>
+
+  <h3>Accessibility</h3>
+  <p>
+    It provides the same accessibility as a standard component.
+  </p>
+</form>
+
+    </div>
+
+    <script src="../javascripts/all.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // Add a markup block after each live example container
+        $('.live-example').after("<div class='markup'></div>");
+
+        // Fill the markup block with the code from the live container
+        $('.live-example').each(function () {
+          $(this).next($('.markup')).text($(this).html());
+        });
+
+        // Wrap the code in the markup block with a <pre> tag for prettyprinting
+        $('.markup').wrapInner('<pre class="prettyprint" />');
+
+        prettyPrint();
+      })
+    </script>
+  </body>
+</html>
