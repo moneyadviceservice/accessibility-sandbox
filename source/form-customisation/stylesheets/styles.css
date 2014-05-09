@@ -124,6 +124,7 @@
 }
 
 .form-checkbox:not(#foo) .form-checkbox__label{
+  color: #388426;
   cursor: pointer;
 }
 
@@ -174,7 +175,6 @@
 
 .form-checkbox:not(#foo).form-checkbox--l .form-checkbox__label,
 .form-checkbox:not(#foo).form-checkbox--l .form-checkbox__label{
-  color: #388426;
   font-size: 30px;
   font-weight: bold;
 }
