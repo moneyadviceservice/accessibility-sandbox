@@ -70,9 +70,19 @@
     background: #fff url(../images/select-arrow.png) right 50% no-repeat;
   }
 
+  .select--ex2 {
+    background: transparent;
+    position: relative;
+    z-index: 3;
+  }
+
   .select-wrap {
     display: block;
     position: relative;
+  }
+
+  .select-wrap:target:after {
+    display: none;
   }
 
   .select-wrap--ex2:after {
@@ -87,9 +97,24 @@
     position: absolute;
     right: 15px;
     top: 50%;
+    z-index: 2;
     -webkit-transition: border .3s;
     -moz-transition: border .3s;
     transition: border .3s;
+  }
+
+  .select-wrap--ex2:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
 
   .select-wrap--ex2:hover:after {
