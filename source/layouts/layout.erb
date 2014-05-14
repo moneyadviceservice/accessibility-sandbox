@@ -15,7 +15,7 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <%= stylesheet_link_tag "normalize", "all" %>
-
+    <%= yield_content :assets %>
     <%= yield_content :head %>
   </head>
 
