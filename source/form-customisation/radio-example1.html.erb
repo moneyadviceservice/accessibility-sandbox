@@ -1,7 +1,9 @@
 ---
 title: Custom radio
 ---
-<link rel="stylesheet" href="stylesheets/styles.css">
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'form-customisation/styles' %>
+<% end %>
 
 <form class="form" action="">
   <h1>Custom radio</h1>
