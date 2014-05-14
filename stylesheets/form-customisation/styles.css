@@ -253,7 +253,3 @@
 /* line 260, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).has-error .input-custom__icon:before {
   border-color: #388426; }
-
-/* line 267, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
-body {
-  background: black !important; }
