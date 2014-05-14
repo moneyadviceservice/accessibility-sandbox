@@ -62,9 +62,6 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  # Change the image publish path
-  set :images_dir, 'frontend-sandbox/images'
-
   # Use relative URLs
   activate :relative_assets
 
