@@ -260,10 +260,3 @@
 .input-custom:not(#foo).has-error .input-custom__icon:before{
   border-color: #388426;
 }
-
-$myvar : #000;
-
-
-body {
-  background: $myvar !important;
-}
