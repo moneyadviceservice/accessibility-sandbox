@@ -67,7 +67,7 @@
 
 
   .select--ex1 {
-    background: #fff url(/images/form-customisation/select-arrow.png) right 50% no-repeat;
+    background: #fff image_url('form-customisation/select-arrow.png') right 50% no-repeat;
   }
 
   .select--ex2 {
@@ -192,7 +192,7 @@
 }
 /* Checkbox */
 .input-custom:not(#foo).input-custom--checkbox .input-custom__icon:after{
-  background: url(/images/form-customisation/tick-icon.png) center center no-repeat;
+  background: image_url('form-customisation/tick-icon.png') center center no-repeat;
   background-size: 65% 65%;
   left: 0;
   position: absolute;
