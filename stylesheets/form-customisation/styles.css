@@ -66,7 +66,7 @@
 
 /* line 69, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select--ex1 {
-  background: white url("/images/form-customisation/select-arrow.png") right 50% no-repeat; }
+  background: white url(../../images/form-customisation/select-arrow.png) right 50% no-repeat; }
 
 /* line 73, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select--ex2 {
@@ -187,7 +187,7 @@
 /* Checkbox */
 /* line 194, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--checkbox .input-custom__icon:after {
-  background: url("/images/form-customisation/tick-icon.png") center center no-repeat;
+  background: url(../../images/form-customisation/tick-icon.png) center center no-repeat;
   background-size: 65% 65%;
   left: 0;
   position: absolute;
