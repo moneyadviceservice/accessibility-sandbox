@@ -1,37 +1,37 @@
 /* line 1, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
 
-/* line 7, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 5, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .form {
   margin: 0 auto; }
 
-/* line 11, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 9, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .fieldset {
   border: none;
   margin: 10px 0;
   padding: 0; }
 
-/* line 17, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 15, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .fieldset--col3 {
   margin-left: -10px; }
 
-/* line 21, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 19, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .fieldset--col3 .fieldset__col {
   float: left;
   padding-left: 10px;
   width: 33.333333%; }
 
-/* line 27, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 25, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .label {
   cursor: pointer;
   display: block;
   font-weight: bold;
   margin: 10px 0; }
 
-/* line 34, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 32, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select {
   background: #fff;
   border: 2px solid #bbb;
@@ -46,6 +46,7 @@
   position: relative;
   width: 100%;
   -webkit-transition: border .3s, color .3s;
+          transition: border .3s, color .3s;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -53,37 +54,33 @@
   text-indent: 5px;
   text-overflow: ""; }
 
-/* line 58, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 56, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select:focus,
 .select:hover {
   border-color: #69c333;
   color: #000; }
 
 /* Hides dropdown arrow on IE11 */
-/* line 64, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 62, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select::-ms-expand {
   display: none; }
 
-/* line 69, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 67, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select--ex1 {
   background: white url(../../images/form-customisation/select-arrow.png) right 50% no-repeat; }
 
-/* line 73, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 71, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select--ex2 {
   background: transparent;
   position: relative;
   z-index: 3; }
 
-/* line 79, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 77, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select-wrap {
   display: block;
   position: relative; }
 
-/* line 84, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
-.select-wrap:target:after {
-  display: none; }
-
-/* line 88, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 82, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select-wrap--ex2:after {
   content: '';
   width: 0px;
@@ -98,10 +95,9 @@
   top: 50%;
   z-index: 2;
   -webkit-transition: border .3s;
-  -moz-transition: border .3s;
-  transition: border .3s; }
+          transition: border .3s; }
 
-/* line 106, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 98, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select-wrap--ex2:before {
   content: '';
   background: #fff;
@@ -115,12 +111,12 @@
   right: 0;
   z-index: 1; }
 
-/* line 120, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 112, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .select-wrap--ex2:hover:after {
   border-color: #388426  transparent transparent transparent; }
 
 /* Hides the custom arrow dropdown */
-/* line 126, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 118, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .ie7 .select, .ie8 .select, .ie9 .select {
   background: #fff;
   padding: 10px;
@@ -128,12 +124,12 @@
   line-height: 50px; }
 
 /* Custom checkbox */
-/* line 136, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 128, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom {
   display: block;
   margin-bottom: 30px; }
 
-/* line 141, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 133, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) input[type='checkbox'],
 .input-custom:not(#foo) input[type='radio'] {
   border: 0;
@@ -145,39 +141,40 @@
   overflow: hidden;
   position: absolute; }
 
-/* line 152, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 144, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) .input-custom__label {
   color: #388426;
   cursor: pointer; }
 
-/* line 158, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 150, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) .input-custom__copy,
 .input-custom:not(#foo) .input-custom__icon {
   vertical-align: middle; }
 
-/* line 162, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 154, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) .input-custom__icon {
   border: 2px solid #ccc;
   border-radius: 5px;
-  box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.1);
   display: inline-block;
   position: relative;
   height: 20px;
   width: 20px; }
 
-/* line 171, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 163, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--checkbox .input-custom__icon {
   border-radius: 5px; }
 
-/* line 174, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 166, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--radio .input-custom__icon {
   border-radius: 50%; }
 
-/* line 178, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 170, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) .input-custom__icon:before {
   float: right; }
 
-/* line 183, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 175, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--l .input-custom__icon,
 .input-custom:not(#foo).input-custom--l .input-custom__icon {
   border-width: 3px;
@@ -185,10 +182,11 @@
   width: 40px; }
 
 /* Checkbox */
-/* line 194, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 186, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--checkbox .input-custom__icon:after {
   background: url(../../images/form-customisation/tick-icon.png) center center no-repeat;
-  background-size: 65% 65%;
+  -webkit-background-size: 65% 65%;
+          background-size: 65% 65%;
   left: 0;
   position: absolute;
   top: 0;
@@ -197,7 +195,7 @@
   width: 100%; }
 
 /* Radio */
-/* line 206, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 198, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--radio .input-custom__icon:after {
   background: #388426;
   border-radius: 50%;
@@ -208,37 +206,35 @@
   height: 100%;
   width: 100%;
   -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5); }
+      -ms-transform: scale(0.5);
+          transform: scale(0.5); }
 
-/* line 221, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 211, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) .input-custom__icon:before,
 .input-custom:not(#foo) .input-custom__icon:after {
   content: '';
   display: block; }
 
-/* line 227, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 217, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--l .input-custom__icon:before,
 .input-custom:not(#foo).input-custom--l .input-custom__icon:after {
   -webkit-transition: border .3s;
-  -moz-transition: border .3s;
-  transition: border .3s; }
+          transition: border .3s; }
 
-/* line 234, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 222, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).input-custom--l .input-custom__label,
 .input-custom:not(#foo).input-custom--l .input-custom__label {
   font-size: 30px;
   font-weight: bold; }
 
-/* line 240, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 228, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) input:checked ~ .input-custom__label > .input-custom__icon,
 .input-custom:not(#foo) .input-custom__label:hover > .input-custom__icon {
   border-color: #388426;
   -webkit-transition: border .3s;
-  -moz-transition: border .3s;
-  transition: border .3s; }
+          transition: border .3s; }
 
-/* line 247, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 233, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) input:focus ~ .input-custom__label > .input-custom__icon {
   border-color: #666;
   border-style: dotted; }
@@ -246,10 +242,10 @@
 /*.input-custom:not(#foo) input:focus ~ .input-custom__label > .input-custom__icon {
   outline: 1px solid blue;
 }*/
-/* line 256, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 242, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo) input:checked ~ .input-custom__label > .input-custom__icon:after {
   visibility: visible; }
 
-/* line 260, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
+/* line 246, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/form-customisation/styles.scss */
 .input-custom:not(#foo).has-error .input-custom__icon:before {
   border-color: #388426; }
