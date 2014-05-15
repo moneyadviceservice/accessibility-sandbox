@@ -1,7 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form {
@@ -44,7 +42,7 @@
     padding: 10px 35px 10px 5px;
     position: relative;
     width: 100%;
-    -webkit-transition: border .3s, color .3s;
+    transition: border .3s, color .3s;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -81,10 +79,6 @@
     position: relative;
   }
 
-  .select-wrap:target:after {
-    display: none;
-  }
-
   .select-wrap--ex2:after {
     content: '';
     width: 0px;
@@ -98,8 +92,6 @@
     right: 15px;
     top: 50%;
     z-index: 2;
-    -webkit-transition: border .3s;
-    -moz-transition: border .3s;
     transition: border .3s;
   }
 
@@ -212,8 +204,6 @@
   visibility: hidden;
   height: 100%;
   width: 100%;
-  -webkit-transform: scale(.5);
-  -moz-transform: scale(.5);
   transform: scale(.5);
 }
 
@@ -225,8 +215,6 @@
 
 .input-custom:not(#foo).input-custom--l .input-custom__icon:before,
 .input-custom:not(#foo).input-custom--l .input-custom__icon:after{
-  -webkit-transition: border .3s;
-  -moz-transition: border .3s;
   transition: border .3s;
 }
 
@@ -239,8 +227,6 @@
 .input-custom:not(#foo) input:checked ~ .input-custom__label > .input-custom__icon,
 .input-custom:not(#foo) .input-custom__label:hover > .input-custom__icon{
   border-color: #388426;
-  -webkit-transition: border .3s;
-  -moz-transition: border .3s;
   transition: border .3s;
 }
 
