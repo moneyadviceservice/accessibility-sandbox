@@ -31,14 +31,7 @@
   }
 
   function setARIAExpanded($labels) {
-    var count = 0;
-    console.log($componentLabels.filter('[aria-selected="true"]').length);
-    if($componentLabels.filter('[aria-selected="true"]').length > 0) {
-      $component.attr('aria-expanded', 'true');
-    }
-    else {
-      $component.attr('aria-expanded', 'false');
-    }
+    $component.attr('aria-expanded', ($componentLabels.filter('[aria-selected="true"]').length > 0).toString());
   }
 
   function openTab($label, $content) {
