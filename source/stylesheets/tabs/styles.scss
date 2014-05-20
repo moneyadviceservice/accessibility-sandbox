@@ -1,0 +1,52 @@
+@import "all";
+
+.component {}
+
+  .component__label {
+    background: #ddd;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 1px;
+    padding: 18px;
+    position: relative;
+
+    &:focus,
+    &:hover {
+      background: darken(#ddd, 40%);
+      color: #fff;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -6px;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+    }
+
+    &.is-active {
+      &:after {
+        border-width: 0 12.5px 10px 12.5px;
+        border-color: transparent transparent #fff transparent;
+      }
+    }
+
+    &.is-inactive {
+      &:after {
+        border-width: 10px 12.5px 0 12.5px;
+        border-color: #fff transparent transparent transparent;
+      }
+    }
+  }
+
+  .component__content {
+    padding: 5px;
+
+    &.is-inactive {
+      @extend %visually-hidden;
+    }
+  }

@@ -24,8 +24,8 @@
       <%= yield %>
     </div>
 
-    <%= javascript_include_tag  "all" %>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <%= javascript_include_tag  "all" %>
     <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
     <script type="text/javascript">
       $(function(){
@@ -41,7 +41,7 @@
         $('.markup').wrapInner('<pre class="prettyprint" />');
 
         prettyPrint();
-      })
+      });
     </script>
   </body>
 </html>
