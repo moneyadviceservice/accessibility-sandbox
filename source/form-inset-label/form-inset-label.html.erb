@@ -1,0 +1,63 @@
+---
+title: Form inset label
+---
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'form-inset-label/styles' %>
+<% end %>
+
+<h1><a href="../index/">Form inset labels</a> - Form elements with an inset label</h1>
+
+<div class="live-example">
+<form action="">
+    <h1>MAS Inset label examples</h1>
+    <div class="form">
+      <div class="form__item">
+        <h2>1. With placeholder</h2>
+        <label for="council1">Council tax</label>
+        <input class="form__input" id="council1" type="text" value="" placeholder="£">
+      </div>
+
+      <div class="form__item">
+        <h2>2. With repositioned label</h2>
+        <label for="council2">Council tax</label>
+        <span class="form__input-label form__input-label--inset form__input-label--symbol">&pound;</span>
+        <input class="form__input form__input--with-symbol-label" id="council2" type="text" value="">
+      </div>
+
+      <div class="form__item">
+       <h2>3a. With repositioned label (before) and aria-labelledby</h2>
+       <label id="councillabel3" for="council3">Council tax</label>
+       <span id="curr3" class="form__input-label form__input-label--inset form__input-label-symbol">&pound;</span>
+       <input class="form__input form__input-label--inset form__input--with-symbol-label" id="council3" aria-labelledby="councillabel3 curr3" type="text" value="">
+      </div>
+
+      <div class="form__item">
+       <h2>3b. With repositioned label (after) and aria-labelledby</h2>
+       <label id="loan1label" for="loan1">Loan APR</label>
+       <input class="form__input form__input--with-symbol-label form__input--with-symbol-label--after" id="loan1" aria-labelledby="loan1label loan1symbol" type="text" value="">
+       <span id="loan1symbol" class="form__input-label form__input-label--inset form__input-label--inset--after form__input-label-symbol">%</span>
+      </div>
+
+      <div class="form__item">
+       <h2>5. With input's style removed and wrapped in a styled wrapper</h2>
+       <label id="council4label" for="council4">Council tax</label>
+       <span class="form__input-wrap">
+         <span id="curr4" class="form__input-label form__input-label-symbol">&pound;</span>
+         <input class="form__input form__input--unstyled" id="council4" aria-labelledby="council4label curr4" type="text" value="">
+       </span>
+      </div>
+
+     <h3>Appendix.</h3>
+
+     <h4>Encoding special characters</h4>
+     <p>We are trying to determine the most accessible way to encode special characters within our markup.</p>
+     <p>Below we are encoding the &pound; sign in four different ways.</p>
+     <ol>
+       <li>£</li>
+       <li>&pound;</li>
+       <li>£ <span class="visually-hidden">(Great British Pound)</span></li>
+       <li>&pound; <span class="visually-hidden">(Great British Pound)</span></li>
+     </ol>
+  </div>
+</form>
+</div>

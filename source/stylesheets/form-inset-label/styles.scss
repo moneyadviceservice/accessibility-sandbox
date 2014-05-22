@@ -1,0 +1,56 @@
+
+label {
+  display: block;
+}
+
+%form-input {
+  border: 3px solid #666;
+  line-height: 20px;
+  padding: 2px;
+}
+
+.form__input:not(.form__input--unstyled) {
+  @extend %form-input;
+  &.form__input--with-symbol-label {
+    padding-left: 20px;
+
+    &.form__input--with-symbol-label--after {
+      padding-left: inherit;
+      padding-right: 20px;
+    }
+  }
+}
+
+.form__input-label {
+  display: inline-block;
+  line-height: 28px;
+  padding: 0 5px;
+  text-align: center;
+
+  &.form__input-label--inset {
+    position: absolute;
+    z-index: 2;
+
+    &.form__input-label--inset--after {
+      position: absolute;
+      margin-left: -30px;
+    }
+  }
+}
+
+.form__input-wrap {
+  @extend %form-input;
+  padding-right: 6px;
+
+  .form__input {
+    background: none;
+  }
+
+  * {
+    vertical-align: middle;
+  }
+}
+
+.form__input--unstyled {
+  border: none;
+}
