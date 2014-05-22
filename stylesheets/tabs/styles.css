@@ -141,6 +141,7 @@ pre.prettyprint {
   padding: 0 10px; }
 
 /* line 68, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/all.scss */
+.component__content.is-inactive,
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -154,3 +155,39 @@ pre.prettyprint {
 /* line 79, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/all.scss */
 .hidden {
   display: none; }
+
+/* line 5, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+.component__label {
+  background: #ddd;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 1px;
+  padding: 18px;
+  position: relative; }
+  /* line 14, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .component__label:focus, .component__label:hover {
+    background: #777777;
+    color: #fff; }
+  /* line 19, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .component__label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -6px;
+    width: 0px;
+    height: 0px;
+    border-style: solid; }
+  /* line 32, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .component__label.is-active:after {
+    border-width: 0 12.5px 10px 12.5px;
+    border-color: transparent transparent #fff transparent; }
+  /* line 39, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .component__label.is-inactive:after {
+    border-width: 10px 12.5px 0 12.5px;
+    border-color: #fff transparent transparent transparent; }
+
+/* line 46, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+.component__content {
+  padding: 5px; }

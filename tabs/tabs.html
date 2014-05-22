@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta name="viewport" content="width=device-width">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Tabs</title>
+
+    <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/tabs/styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+    
+  </head>
+
+  <body class="tabs tabs_tabs">
+    <div class="l-container">
+      
+<h1><a href="index.html">Tabs Index</a></h1>
+
+<hr>
+
+<div class="live-example">
+
+  <div class="js-component component" role="tablist" aria-expanded="true">
+    <div class="component__label is-active" id="title-household" role="tab" aria-selected="true" tabindex="0">
+      Enter individual <span class="visually-hidden">household</span> costs
+    </div>
+    <div class="component__content is-active" role="tabpanel" aria-hidden="false" aria-labelledby="title-household" tabindex="0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+      <form action="">
+        <div>
+          <label for="text1">Label</label>
+          <input type="text" name="" id="text1">
+        </div>
+        <div>
+          <label for="text2">Label</label>
+          <input type="text" name="" id="text2">
+        </div>
+        <div>
+          <label for="text3">Label</label>
+          <input type="text" name="" id="text3">
+        </div>
+        <div>
+          <label for="text4">Label</label>
+          <input type="text" name="" id="text4">
+        </div>
+      </form>
+    </div>
+
+    <div class="component__label is-inactive" id="title-grocery" role="tab" tabindex="0" aria-selected="false">
+      Enter individual <span class="visually-hidden">grocery</span> costs
+    </div>
+    <div class="component__content is-inactive" role="tabpanel" aria-hidden="true" aria-labelledby="title-grocery" tabindex="-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+
+    <div class="component__label is-inactive" id="title-childcare" role="tab" tabindex="0" aria-selected="false">
+      Enter individual <span class="visually-hidden">childcare</span> costs
+    </div>
+    <div class="component__content is-inactive" role="tabpanel" aria-hidden="true" aria-labelledby="title-childcare" tabindex="-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../javascripts/all.js" type="text/javascript"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // Add a markup block after each live example container
+        $('.live-example').after("<div class='markup'></div>");
+
+        // Fill the markup block with the code from the live container
+        $('.live-example').each(function () {
+          $(this).next($('.markup')).text($(this).html());
+        });
+
+        // Wrap the code in the markup block with a <pre> tag for prettyprinting
+        $('.markup').wrapInner('<pre class="prettyprint" />');
+
+        prettyPrint();
+      });
+    </script>
+  </body>
+</html>
