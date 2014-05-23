@@ -37,14 +37,14 @@
       <div class="form__item">
         <label for="savings" class="form__label-heading">How much do you save a
           month?</label>
-        <input id="savings" placeholder="£" type="number"/>
+        <input id="savings" placeholder="£" />
       </div>
 
       <div class="form__item">
         <label for="saving-proportion" class="form__label-heading">What
           proportion of your income do
           you save?</label>
-        <input id="saving-proportion" placeholder="%" type="number"/>
+        <input id="saving-proportion" placeholder="%" />
       </div>
 
       <div class="form__item">
@@ -95,7 +95,6 @@
 
       <div class="form__item">
         <label for="county" class="form__label-heading">County</label>
-        <select id="day">
         <select id="county">
           <option value="1">Aberdeen City</option>
           <option value="2" selected>Berkshire</option>
@@ -152,9 +151,8 @@
       </p>
 
       <p>
-        <input id="terms" type="checkbox" name="toppings" value="1">
-        <label for="terms">I agree to the
-          <a href="/terms-and-conditions">terms and conditions</a>
+        <label for="terms"><input id="terms" type="checkbox" name="terms" value="1"> I agree to the
+          <a href="/terms-and-conditions">terms and conditions</a> * <span class="visually-hidden">required</span>
         </label>
       </p>
 
