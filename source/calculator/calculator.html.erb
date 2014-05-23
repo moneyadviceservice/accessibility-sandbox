@@ -1,0 +1,63 @@
+---
+title: Calculator with Live Regions
+---
+<% content_for :assets do %>
+  <%#= stylesheet_link_tag 'calculator/styles' %>
+<% end %>
+
+<h1><a href="../index.html">Calculator</a> - With live regions</h1>
+
+<div class="live-example">
+  <form class="form" action="">
+    <div class="form__item">
+      <label for="housingtotal">My total monthly housing costs are:</label>
+      <input type="number" name="" id="housingtotal">
+      <p>or <button role="link" class="js-toggle" data-toggle-trigger="housing">Enter individual costs</button></p>
+
+      <div class="form" data-toggle-target="housing">
+        <fieldset class="form__item">
+          <legend class="form__item__cell">Council tax</legend>
+          <div class="form__item__cell">
+            <div class="form__item">
+              <label id="councillabel1" for="council1"><span class="visually-hidden">Cost in </span> &pound;</label>
+             <input class="js-item-value" id="council1" aria-labelledby="councillabel1" type="text" value="">
+            </div>
+          </div>
+          <div class="form__item__cell">
+            <label for="frequency1" class="visually-hidden">Frequency</label>
+            <select name="" id="frequency1">
+              <option value="">Select</option>
+              <option value="">per week</option>
+              <option value="">per month</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__item">
+          <legend class="form__item__cell">Electricity</legend>
+          <div class="form__item__cell">
+            <div class="form__item">
+              <label id="electricitylabel1" for="electricity1"><span class="visually-hidden">Cost in </span> &pound;</label>
+             <input class="js-item-value" id="electricity1" aria-labelledby="electricitylabel1" type="text" value="">
+            </div>
+          </div>
+          <div class="form__item__cell">
+            <label for="frequency1" class="visually-hidden">Frequency</label>
+            <select name="" id="frequency1">
+              <option value="">Select</option>
+              <option value="">per week</option>
+              <option value="" selected>per month</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div class="form__item">
+          <div class="form__item__cell" id="total">Total <span class="visually-hidden">monthly housing costs are</span>:</div>
+          <div class="form__item__cell"><output class="js-item-total" aria-live="assertive" aria-atomic="true" aria-relevant="all" aria-describedby="total">&pound;0</output></div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</div>
