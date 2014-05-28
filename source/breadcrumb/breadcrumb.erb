@@ -1,0 +1,59 @@
+---
+title: Breadcrumb
+---
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'breadcrumb/styles' %>
+<% end %>
+
+<h1><a href="../index.html">Breadcrumb</a></h1>
+
+<p>There are numerous way to markup a bread crumb in HTML.  Is one better than the others?</p>
+<p>The shortest a breadcrumb will be is 1 item (a link to home). The longest a
+  breadcrumb will be is 3 items (a link to home, a parent category and a child category.
+  We are not displaying the current page in the breadcrumb.</p>
+
+<div class="live-example">
+  <h2>1. Ordered List</h2>
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a> &gt;</li>
+    <li><a href="/debt/">Debt and borrowing</a> &gt;</li>
+    <li><a href="/debt/problem">Mortgage and rent problems</a></li>
+  </ol>
+
+  <h2>2. Unordered list</h2>
+  <ul class="breadcrumb">
+    <li><a href="/">Home</a> &gt;</li>
+    <li><a href="/debt/">Debt and borrowing</a> &gt;</li>
+    <li><a href="/debt/problem">Mortgage and rent problems</a></li>
+  </ul>
+
+  <h2>3. Paragraph </h2>
+  <p><a href="/">Home</a> &gt;
+    <a href="/debt/">Debt and borrowing</a> &gt;
+    <a href="/debt/problem">Mortgage and rent problems</a>
+  </p>
+
+
+  <h2>4. Is it helpful to wrap the breadcrumb in a nav element and give it a label of breadcrumb?</h2>
+  <nav role="navigation" aria-label="breadcrumb">
+    <p><a href="/">Home</a> &gt;
+      <a href="/debt/">Debt and borrowing</a> &gt;
+      <a href="/debt/problem">Mortgage and rent problems</a>
+    </p>
+  </nav>
+
+  <h2>Appendix.</h2>
+
+  <h3>Presenting the hierachy to a screen reader user</h3>
+
+  <p>For a sighted user the arrow in between the links in the bread crumb suggest a parent child relationship. Should this also be communicated to a screen reader user? If yes,  what is the best way to do it?</p>
+
+  <p>Below are some examples using different characters and text that can be visually hidden</p>
+
+  <ol>
+    <li>&gt;</li>
+    <li>&#x3009;</li>
+    <li>is the parent of</li>
+  </ol>
+
+</div>
