@@ -1,0 +1,9 @@
+/* line 5, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/breadcrumb/styles.scss */
+ul.breadcrumb,
+ol.breadcrumb,
+ul.breadcrumb li,
+ol.breadcrumb li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline; }
