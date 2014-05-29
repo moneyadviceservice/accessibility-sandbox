@@ -15,11 +15,11 @@ title: Tabs - Example 1
   <div class="js-tabs tabs">
 
     <ul class="tabs__nav">
-      <li><a href="#sum1">Your redundancy rights</a></li>
-      <li><a href="#sum2">Redundancy pay</a></li>
-      <li><a href="#sum3">Managing your money</a></li>
-      <li><a href="#sum4">Help claiming benefits</a></li>
-      <li><a href="#sum5">Last day checklist</a></li>
+      <div><a href="#sum1">Your redundancy rights</a></div>
+      <div><a href="#sum2">Redundancy pay</a></div>
+      <div><a href="#sum3">Managing your money</a></div>
+      <div><a href="#sum4">Help claiming benefits</a></div>
+      <div><a href="#sum5">Last day checklist</a></div>
     </ul>
 
     <div class="tabs__item is-active" id="sum1">
@@ -70,3 +70,11 @@ title: Tabs - Example 1
   </div>
 
 </div>
+
+<% content_for :body_end do %>
+  <script>
+    accessibleTabs.init({
+      useRovingTab : true
+    });
+  </script>
+<% end %>
