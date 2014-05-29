@@ -1,36 +1,56 @@
 ;(function(window){
   'use strict';
 
-  // NOTE: This is not production-ready code. This just a quick example for DAC.
+  // NOTE: This just a quick tabs example for DAC and shouldn't be used in production.
 
-  var tabs = {
-    init : function() {
+  var accessibleTabs = {
+    init : function(options) {
       var that = this;
 
+      this.tabIndex = options.useRovingTab? 0 : -1;
       this.activeClass = 'is-active';
-      this.$selectedIndicatorText = $('<span class="visually-hidden">(Selected)</span>');
+      this.$selectedIndicatorText = $('<span class="visually-hidden"> (Selected)</span>');
       this.$tabsComponent = $('.js-tabs');
-      this.$tabLinks = this.$tabsComponent.find('.tabs__nav a');
+      this.$tabsNav = this.$tabsComponent.find('.tabs__nav');
+      this.$tabLinks = null;
       this.$tabs = this.$tabsComponent.find('.tabs__item');
+
+      this.$tabs.attr({
+        'aria-hidden' : 'true',
+        'tabindex' : '-1'
+      });
+
+      // Select first tab
+      this.convertLinksToButtons();
+      this.$currentTab = this.$tabs.first();
+      this.$currentTabLink = this.$tabLinks.first();
+    },
+
+    handleTabsAction : function(e, $tabLink) {
+      e.preventDefault();
+      this.selectTab($tabLink);
+    },
+
+    convertLinksToButtons : function() {
+      var that = this;
+
+      this.$tabsNav.find('a').each(function() {
+        var $newElem = $('<button/>');
+        $newElem
+          .attr({
+             'data-target-tab' : $(this)[0].hash
+          })
+          .text($(this).text());
+        $(this).replaceWith($newElem);
+      });
+
+      this.$tabLinks = this.$tabsNav.find('button');
 
       this.$tabLinks.on('click keydown', function(e) {
         if(e.which === 13 || e.which === 1 || e.which === 32) {
           that.handleTabsAction(e, $(this));
         }
       });
-
-      this.$currentTab = this.$tabs.first();
-      this.$currentTabLink = this.$tabLinks.first();
-      this.$tabs.attr('aria-hidden', 'true');
-
-      // Select first tab
-      this.selectTab(this.$tabLinks.first());
-
-    },
-
-    handleTabsAction : function(e, $tabLink) {
-      e.preventDefault();
-      this.selectTab($tabLink);
     },
 
     selectTab : function($tabLink) {
@@ -40,7 +60,7 @@
 
       // Store current tab
       this.$currentTabLink = $tabLink;
-      this.$currentTab = this.$tabs.filter($tabLink[0].hash);
+      this.$currentTab = this.$tabs.filter($tabLink.attr('data-target-tab'));
 
       // Remove active class from tab links
       this.$tabLinks.parent().removeClass(this.activeClass);
@@ -49,7 +69,12 @@
       if(this.$previousTabLink) {
         this.$previousTabLink.find('visually-hidden').remove();
         this.$previousTabLink.attr('aria-selected', 'false');
-        this.$previousTab.attr('aria-hidden', 'true');
+        this.$previousTab
+          .attr({
+            'aria-hidden' : 'true',
+            'tabindex' : -1
+          })
+          .removeClass(this.activeClass);
       }
 
       // Add hidden selected text and set aria-selected to true
@@ -59,15 +84,21 @@
             .parent()
             .addClass(this.activeClass);
 
-      // Remove class from activeTab
-      this.$previousTab.removeClass(this.activeClass);
-
       // And update current tab
       this.$currentTab
         .addClass(this.activeClass)
-        .attr('aria-hidden', 'false');
+        .attr({
+          'aria-hidden': 'false'
+        })
+        .focus();
+
+      this.shiftTabIndex();
+    },
+
+    shiftTabIndex : function() {
+      this.$currentTab.attr('tabindex', this.tabIndex);
     }
   };
 
-  tabs.init();
+  window.accessibleTabs = accessibleTabs;
 })(window);

@@ -23,7 +23,7 @@
     
   </head>
 
-  <body class="tabs tabs_tabs">
+  <body class="tabs tabs_tabs-standard">
     <div class="l-container">
       
 <h1><a href="index.html">Tabs Index</a></h1>
@@ -35,11 +35,11 @@
   <div class="js-tabs tabs">
 
     <ul class="tabs__nav">
-      <li><a href="#sum1">Your redundancy rights</a></li>
-      <li><a href="#sum2">Redundancy pay</a></li>
-      <li><a href="#sum3">Managing your money</a></li>
-      <li><a href="#sum4">Help claiming benefits</a></li>
-      <li><a href="#sum5">Last day checklist</a></li>
+      <div><a href="#sum1">Your redundancy rights</a></div>
+      <div><a href="#sum2">Redundancy pay</a></div>
+      <div><a href="#sum3">Managing your money</a></div>
+      <div><a href="#sum4">Help claiming benefits</a></div>
+      <div><a href="#sum5">Last day checklist</a></div>
     </ul>
 
     <div class="tabs__item is-active" id="sum1">
@@ -91,6 +91,7 @@
 
 </div>
 
+
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -112,5 +113,12 @@
         prettyPrint();
       });
     </script>
+
+      <script>
+    accessibleTabs.init({
+      useRovingTab : true
+    });
+  </script>
+
   </body>
 </html>
