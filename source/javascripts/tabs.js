@@ -7,7 +7,7 @@
     init : function(options) {
       var that = this;
 
-      this.tabIndex = options.useRovingTab? 0 : -1;
+      this.tabIndex = options.useRovingFocus? 0 : -1;
       this.activeClass = 'is-active';
       this.$selectedIndicatorText = $('<span class="visually-hidden"> (Selected)</span>');
       this.$tabsComponent = $('.js-tabs');
