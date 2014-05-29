@@ -24,11 +24,13 @@
       this.convertLinksToButtons();
       this.$currentTab = this.$tabs.first();
       this.$currentTabLink = this.$tabLinks.first();
+
+      this.selectTab(this.$currentTabLink);
     },
 
     handleTabsAction : function(e, $tabLink) {
       e.preventDefault();
-      this.selectTab($tabLink);
+      this.selectTab($tabLink, true);
     },
 
     convertLinksToButtons : function() {
@@ -53,7 +55,7 @@
       });
     },
 
-    selectTab : function($tabLink) {
+    selectTab : function($tabLink, setFocus) {
       // Store previous tab
       this.$previousTabLink = this.$currentTabLink;
       this.$previousTab = this.$currentTab;
@@ -89,8 +91,11 @@
         .addClass(this.activeClass)
         .attr({
           'aria-hidden': 'false'
-        })
-        .focus();
+        });
+
+      if(setFocus){
+        this.$currentTab.focus();
+      }
 
       this.shiftTabIndex();
     },
