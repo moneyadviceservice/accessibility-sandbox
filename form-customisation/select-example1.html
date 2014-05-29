@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]> <html lang="en" class="ie ie7"> <![endif]-->
-<!--[if IE 8 ]> <html lang="en" class="ie ie8"> <![endif]-->
-<!--[if IE 9 ]> <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en"><!--<![endif]-->
+<html lang="en" class="no-js"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
 
@@ -13,6 +13,8 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Custom select box example 1</title>
+
+    <script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/no\-js/i, 'js');</script>
 
     <link href="../stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />

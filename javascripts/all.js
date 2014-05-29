@@ -419,78 +419,73 @@
 ;(function(window){
   'use strict';
 
-  var $component;
-  var $componentLabels;
+  // NOTE: This is not production-ready code. This just a quick example for DAC.
 
-  function setup() {
-    $component = $('.js-component');
-    $componentLabels = $component.find('.component__label');
+  var tabs = {
+    init : function() {
+      var that = this;
 
-    $componentLabels.on('click keydown', function(e) {
-      if(e.which === 13 || e.which === 1 || e.which === 32) {
-        handleComponentAction(e, $(this));
+      this.activeClass = 'is-active';
+      this.$selectedIndicatorText = $('<span class="visually-hidden">(Selected)</span>');
+      this.$tabsComponent = $('.js-tabs');
+      this.$tabLinks = this.$tabsComponent.find('.tabs__nav a');
+      this.$tabs = this.$tabsComponent.find('.tabs__item');
+
+      this.$tabLinks.on('click keydown', function(e) {
+        if(e.which === 13 || e.which === 1 || e.which === 32) {
+          that.handleTabsAction(e, $(this));
+        }
+      });
+
+      this.$currentTab = this.$tabs.first();
+      this.$currentTabLink = this.$tabLinks.first();
+      this.$tabs.attr('aria-hidden', 'true');
+
+      // Select first tab
+      this.selectTab(this.$tabLinks.first());
+
+    },
+
+    handleTabsAction : function(e, $tabLink) {
+      e.preventDefault();
+      this.selectTab($tabLink);
+    },
+
+    selectTab : function($tabLink) {
+      // Store previous tab
+      this.$previousTabLink = this.$currentTabLink;
+      this.$previousTab = this.$currentTab;
+
+      // Store current tab
+      this.$currentTabLink = $tabLink;
+      this.$currentTab = this.$tabs.filter($tabLink[0].hash);
+
+      // Remove active class from tab links
+      this.$tabLinks.parent().removeClass(this.activeClass);
+
+      // Remove hidden selected text and set aria-selected to false
+      if(this.$previousTabLink) {
+        this.$previousTabLink.find('visually-hidden').remove();
+        this.$previousTabLink.attr('aria-selected', 'false');
+        this.$previousTab.attr('aria-hidden', 'true');
       }
-    });
-  }
 
-  function handleComponentAction(e, $label) {
-    toggleTab($label);
-    setARIAExpanded($componentLabels);
-  }
+      // Add hidden selected text and set aria-selected to true
+      this.$currentTabLink
+          .append(this.$selectedIndicatorText)
+          .attr('aria-selected', 'true')
+            .parent()
+            .addClass(this.activeClass);
 
-  function toggleTab($label) {
-    var $content = $label.next('.component__content');
-    if( $label.attr('aria-selected') === 'true'){
-      closeTab($label, $content);
+      // Remove class from activeTab
+      this.$previousTab.removeClass(this.activeClass);
+
+      // And update current tab
+      this.$currentTab
+        .addClass(this.activeClass)
+        .attr('aria-hidden', 'false');
     }
-    else{
-      openTab($label, $content);
-    }
-  }
+  };
 
-  function setARIAExpanded($labels) {
-    $component.attr('aria-expanded', ($componentLabels.filter('[aria-selected="true"]').length > 0).toString());
-  }
-
-  function openTab($label, $content) {
-    $label
-      .attr({
-        'aria-selected' : 'true',
-        'tabindex' : 0
-      })
-      .removeClass('is-inactive')
-      .addClass('is-active');
-
-    $content
-      .attr({
-        'aria-hidden' : 'false',
-        'tabindex' : 0
-      })
-      .removeClass('is-inactive')
-      .addClass('is-active');
-  }
-
-  function closeTab($label, $content) {
-    $label
-      .attr({
-        'aria-selected' : 'false',
-        'tabindex' : 0
-      })
-      .addClass('is-inactive')
-      .removeClass('is-active');
-
-    $content
-      .attr({
-        'aria-hidden' : 'true',
-        'tabindex' : -1
-      })
-      .addClass('is-inactive')
-      .removeClass('is-active');
-  }
-
-  function closeAllTabs($tabs) {
-
-  }
-
-  setup();
+  tabs.init();
 })(window);
