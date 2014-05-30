@@ -466,6 +466,10 @@
 
       this.$tabLinks = this.$tabsNav.find('button');
 
+      this.$tabLinks.attr({
+        'aria-selected' : 'false'
+      });
+
       this.$tabLinks.on('click keydown', function(e) {
         if(e.which === 13 || e.which === 1 || e.which === 32) {
           that.handleTabsAction(e, $(this));

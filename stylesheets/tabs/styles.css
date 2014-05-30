@@ -168,17 +168,41 @@ pre.prettyprint {
 .hidden {
   display: none; }
 
-/* line 6, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+/* line 3, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+* {
+          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+/* line 12, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
 .tabs__nav {
-  float: left; }
-  /* line 11, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
-  .tabs__nav .is-active a {
+  float: left;
+  text-align: left;
+  width: 25%; }
+  /* line 19, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .tabs__nav button,
+  .tabs__nav a {
+    border: none;
+    border-radius: 5px;
+    background: #ccc;
+    color: black;
+    display: block;
+    margin-bottom: 2px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+    width: 100%; }
+  /* line 33, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .tabs__nav .is-active a, .tabs__nav .is-active button {
     font-weight: bold; }
 
-/* line 17, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+/* line 39, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
 .tabs__item {
+  border: 1px solid #000;
   display: none;
-  padding-left: 30%; }
-  /* line 21, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  float: right;
+  padding: 0 20px 40px;
+  width: 70%; }
+  /* line 46, /Users/jperry/Documents/mas/frontend-sandbox/source/stylesheets/tabs/styles.scss */
   .no-js .tabs__item, .tabs__item.is-active {
     display: block; }
