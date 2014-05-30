@@ -1,0 +1,84 @@
+---
+title: Tabs - Tabs with roving tab index
+---
+
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'tabs/styles' %>
+<% end %>
+
+<h1><a href="index.html">Tabs Index</a></h1>
+
+<h1>Tabs with roving tab index</h1>
+
+<p>This example is the same as the Standard tabs example except that the <code>tabindex</code> of the selected tab content is set to <dfn>0</dfn> when it is selected. This makes the tab content focussable within the page's tab order.</p>
+
+<hr>
+
+<div class="live-example">
+
+  <div class="js-tabs tabs">
+
+    <div class="tabs__nav">
+      <div><a href="#sum1">Your redundancy rights</a></div>
+      <div><a href="#sum2">Redundancy pay</a></div>
+      <div><a href="#sum3">Managing your money</a></div>
+      <div><a href="#sum4">Help claiming benefits</a></div>
+      <div><a href="#sum5">Last day checklist</a></div>
+    </div>
+
+    <div class="tabs__item is-active" id="sum1">
+      <h2>Your redundancy rights</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+      <form action="">
+        <div>
+          <label for="text1">Label</label>
+          <input type="text" name="">
+        </div>
+        <div>
+          <label for="text2">Label</label>
+          <input type="text" name="">
+        </div>
+        <div>
+          <label for="text3">Label</label>
+          <input type="text" name="">
+        </div>
+        <div>
+          <label for="text4">Label</label>
+          <input type="text" name="">
+        </div>
+      </form>
+    </div>
+
+    <div class="tabs__item" id="sum2">
+      <h2>Redundancy pay</h2>
+      <p>Eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+
+    <div class="tabs__item" id="sum3">
+      <h2>Managing your money</h2>
+      <p>Ipsum dolor sit amet, consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+
+    <div class="tabs__item" id="sum4">
+      <h2>Help claiming benefits</h2>
+      <p>Consectetur adipisicing elit. Natus, vitae, laboriosam beatae earum sapiente</p>
+      <p>quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+
+    <div class="tabs__item" id="sum5">
+      <h2>Last day checklist</h2>
+      <p>Quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+      <p>Sapiente quibusdam eaque sit amet corporis excepturi nihil dolorem at atque ratione maiores ex autem vero optio?</p>
+    </div>
+
+  </div>
+
+</div>
+
+<% content_for :body_end do %>
+  <script>
+    accessibleTabs.init({
+      useRovingFocus : true
+    });
+  </script>
+<% end %>
