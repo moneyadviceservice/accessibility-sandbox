@@ -1,22 +1,47 @@
 @import "all";
 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 .tabs {
   @extend %clearfix;
 }
   .tabs__nav {
 
     float: left;
+    text-align: left;
+    width: 25%;
+
+    button,
+    a {
+      border: none;
+      border-radius: 5px;
+      background: #ccc;
+      color: black;
+      display: block;
+      margin-bottom: 2px;
+      padding: 10px;
+      text-decoration: none;
+      text-align: left;
+      width: 100%;
+    }
 
     .is-active {
-      a  {
+      a, button {
         font-weight: bold;
       }
     }
   }
 
   .tabs__item {
+    border: 1px solid #000;
     display: none;
-    padding-left: 30%;
+    float: right;
+    padding: 0 20px 40px;
+    width: 70%;
 
     .no-js &, &.is-active {
       display: block;
