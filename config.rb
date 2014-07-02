@@ -55,7 +55,7 @@ set :images_dir, 'images'
 activate :autoprefixer
 
 after_configuration do
-  sprockets.append_path File.join root, 'source/vendor/assets/bower_components'
+  sprockets.append_path File.join root, 'vendor/assets/bower_components'
 end
 
 # Build-specific configuration

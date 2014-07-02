@@ -20,4 +20,4 @@
 .DS_Store
 
 Gemfile.lock
-/source/vendor
+/vendor
