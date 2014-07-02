@@ -12,4 +12,5 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 gem 'middleman-gh-pages'
 gem 'middleman-autoprefixer'
+gem 'middleman-sprockets'
 gem 'sass'

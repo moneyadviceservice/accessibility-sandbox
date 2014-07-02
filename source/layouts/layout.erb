@@ -16,7 +16,20 @@
 
     <script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/no\-js/i, 'js');</script>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%#= stylesheet_link_tag "normalize", "all" %>
+
+    <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
+    <%= stylesheet_link_tag 'basic' %>
+
+    <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+    <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
+    <![endif]-->
+
+    <%# Responsive styles for all modern devices, excluded from older IE version %>
+    <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+    <%= stylesheet_link_tag 'enhanced_responsive', :media => 'only all' %>
+    <!--<![endif]-->
+
     <%= yield_content :assets %>
     <%= yield_content :head %>
   </head>

@@ -45,6 +45,7 @@
 #   end
 # end
 
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -52,6 +53,10 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :autoprefixer
+
+after_configuration do
+  sprockets.append_path File.join root, 'source/vendor/assets/bower_components'
+end
 
 # Build-specific configuration
 configure :build do
