@@ -1,0 +1,21 @@
+{
+  "name": "eventsWithPromises",
+  "ignore": [
+    ".jshintrc",
+    ".gitignore",
+    "test"
+  ],
+  "dependencies": {
+    "rsvp": null
+  },
+  "homepage": "https://github.com/jonnywyatt/eventsWithPromises",
+  "_release": "9223ef4d3a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9223ef4d3a670753179145b9dd8133fcefa211a3"
+  },
+  "_source": "https://github.com/jonnywyatt/eventsWithPromises.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/jonnywyatt/eventsWithPromises.git"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "frontend-assets",
+  "private": true,
+  "ignore": [
+    "bower.json",
+    "README.md",
+    ".rspec",
+    ".ruby-gemset",
+    ".ruby-version",
+    "Gemfile",
+    "LICENSE",
+    "README.rdoc",
+    "Rakefile",
+    "app/**/*",
+    "build.sh",
+    "dough.gemspec",
+    "lib/**/*",
+    "script/**/*",
+    "spec/**/*",
+    "test.sh"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.0",
+    "eventsWithPromises": "https://github.com/jonnywyatt/eventsWithPromises.git#master",
+    "requirejs": "latest",
+    "jquery": "latest",
+    "jqueryThrottleDebounce": "https://github.com/cowboy/jquery-throttle-debounce.git"
+  },
+  "homepage": "https://github.com/moneyadviceservice/dough",
+  "_release": "82f8430ee3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "82f8430ee365da45437d91b5e54e7825cd3824fc"
+  },
+  "_source": "git://github.com/moneyadviceservice/dough.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/moneyadviceservice/dough"
+}
