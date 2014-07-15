@@ -1,0 +1,122 @@
+---
+title: Client-side form validation
+---
+
+
+<div class="l-constrained l-padded">
+  <form action="" class="form">
+    <h1>Forms</h1>
+    <p>* Indicates required field</p>
+
+    <div class="validation-summary js-error-summary" role="alert">
+      <div class="validation-summary__content-container">
+        <p class="validation-summary__title js-error-count"></p>
+        <ol class="validation-summary__list js-error-list"></ol>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <output class="js-error-container"></output>
+      <label for="fname" class="form__label-heading">
+        First name * <span class="visually-hidden">required</span>
+      </label>
+      <input id="fname" type="text" value="" aria-required="true" data-error-message="Your First name can't be blank">
+    </div>
+
+    <div class="form__row">
+      <output class="js-error-container"></output>
+      <label for="email" class="form__label-heading">
+        Email address * <span class="visually-hidden">required</span>
+      </label>
+      <input id="email" type="email" value="" aria-required="true" data-error-message="Your Email address is invalid">
+    </div>
+
+    <div class="form__row">
+      <output class="js-error-container"></output>
+      <label for="select_element" class="form__label-heading">
+        Current month * <span class="visually-hidden">required</span>
+      </label>
+      <select name="select_element" id="select_element" aria-required="true" data-error-message="Current month must be selected">
+        <option value="">Select</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+    </div>
+
+    <!-- <div class="form__row">
+      <output class="js-error-container"></output>
+      <label for="textarea" class="form__label-heading">
+        Message * <span class="visually-hidden">required</span>
+      </label>
+      <textarea name="textarea" id="textarea" aria-required="true" data-error-message="Message can't be blank"></textarea>
+    </div>
+
+    <div class="form__row">
+      <fieldset class="form__group">
+        <legend>Form group with checkboxes</legend>
+        <div class="form__group-item">
+          <label>
+            <input class="form__group-input" name="checkboxitem1" type="checkbox" aria-required="true" value="First">
+            Option 1 * <span class="visually-hidden">required</span>
+          </label>
+        </div>
+        <div class="form__group-item">
+          <label>
+            <input class="form__group-input" name="checkboxitem2" type="checkbox" value="First">
+            Option 2
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form__row">
+      <fieldset class="form__group">
+        <legend>Form group with radios * <span class="visually-hidden">required</span></legend>
+        <div class="form__group-item">
+          <label>
+            <input type="radio" name="radioitem" class="form__group-input" aria-required="true" value="First">
+            This option
+          </label>
+        </div>
+        <div class="form__group-item">
+          <label>
+            <input type="radio" name="radioitem" class="form__group-input" value="Second">
+            Or this option
+          </label>
+        </div>
+        <div class="form__group-item">
+          <label>
+            <input type="radio" name="radioitem" class="form__group-input" value="Third">
+            Or this option
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form__row">
+      <label class="form__label-heading" for="input4" id="form-label4">Inset label</label>
+      <span class="form__input-container">
+        <span class="form__input-label" id="input-label4a">&pound;</span>
+        <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label4a input-label4b">
+        <span class="form__input-outline"></span>
+      </span>
+    </div> -->
+
+    <div class="form__row">
+      <button class="button button--primary" type="submit">Submit</button>
+    </div>
+
+    <output class="js-alert visually-hidden" role="alert"></output>
+
+  </form>
+</div>

@@ -1,0 +1,7 @@
+.validation-summary {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

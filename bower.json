@@ -1,0 +1,15 @@
+{
+  "name": "frontend-sandbox",
+  "private": true,
+  "ignore": ["*", "!app/assets/**/*", "!vendor/assets/fonts/*"],
+  "dependencies": {
+    "frontend-assets": "git://github.com/moneyadviceservice/dough",
+    "html-inspector": "0.7.0",
+    "sinonjs": "1.7.3",
+    "html5shiv": "3.7.0",
+    "requirejs": "2.1.*",
+    "jquery": "1.11.*",
+    "jquery-waypoints": "2.0.*",
+    "jquery-ujs": "*"
+  }
+}

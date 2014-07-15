@@ -45,13 +45,19 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
 
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
+# set :css_dir, 'assets/stylesheets'
+# set :js_dir, 'assets/javascripts'
+# set :images_dir, 'assets/images'
+set :fonts_dir, 'vendor/assets/bower_components/frontend-assets/fonts'
 
 activate :autoprefixer
+
+after_configuration do
+  sprockets.append_path File.join root, 'vendor/assets/bower_components'
+  sprockets.append_path File.join root, 'vendor/assets/bower_components/requirejs'
+  # binding.pry
+end
 
 # Build-specific configuration
 configure :build do
@@ -62,10 +68,10 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
