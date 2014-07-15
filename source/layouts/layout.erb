@@ -60,5 +60,9 @@
     </script>
 
     <%= yield_content :body_end %>
+
+    <%# START RequireJS load of application %>
+    <%= javascript_include_tag 'requirejs/require', data: {main: ''} %>
+    <%# END RequireJS load of application %>
   </body>
 </html>

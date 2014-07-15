@@ -14,3 +14,5 @@ gem 'middleman-gh-pages'
 gem 'middleman-autoprefixer'
 gem 'middleman-sprockets'
 gem 'sass'
+
+gem 'pry'
