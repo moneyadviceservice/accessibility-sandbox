@@ -1,7 +1,20 @@
+// TODO Knead all of these styles into more Dough-like style
 .validation-summary {
   display: none;
 
   &.is-active {
     display: block;
   }
+}
+
+select.is-invalid {
+  border-color: red;
+}
+
+.form__row-error {
+  display: block;
+}
+
+.form__label-heading--inline {
+  display: inline-block;
 }
