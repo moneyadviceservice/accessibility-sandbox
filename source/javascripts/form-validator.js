@@ -285,8 +285,8 @@
 
   FormValidator.prototype.updateErrorCountMessage = function() {
     var errorLength = this.getErrorCount();
-    this.addLiveRegion(this.$errorCount, errorLength + (errorLength > 1? ' errors' : ' error') + ' prevented calculation<span class="visually-hidden">. Tab to cycle through errors</span> :' );
     if(this.eventType === 'submit') {
+      this.addLiveRegion(this.$errorCount, errorLength + (errorLength > 1? ' errors' : ' error') + ' prevented calculation<span class="visually-hidden">. Tab to cycle through errors</span> :' );
       this.$errorCount.attr('tabindex',-1);
       this.$errorCount[0].focus();
     }
