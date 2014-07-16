@@ -103,7 +103,6 @@
       this.updateFieldValidity(this.$currentField, 'invalid');
       this.formIsValid = false;
     }
-
   };
 
   FormValidator.prototype.setFieldValidState = function() {
@@ -254,9 +253,11 @@
   FormValidator.prototype.updateSummaryItems = function() {
     var field;
     var $items = [];
+    var invalidFields = this.getInvalidFields();
+
     this.$errorList.empty();
-    for(field in this.getInvalidFields()) {
-      $items.push(this.createSummaryItem(this.requiredFields[field].elem));
+    for(field in invalidFields) {
+      $items.push(this.createSummaryItem(invalidFields[field].elem));
     }
     this.$errorList.append($items);
   };
