@@ -72,7 +72,7 @@
       this.$form.submit();
     }
     else {
-      // this.focusFirstSummaryItem();
+      this.focusFirstInvalidItem();
     }
   };
 
@@ -287,7 +287,6 @@
     var errorLength = this.getErrorCount();
     this.addLiveRegion(this.$errorCount, errorLength + (errorLength > 1? ' errors' : ' error') + ' prevented calculation<span class="visually-hidden">. Tab to cycle through errors</span> :' );
     if(this.eventType === 'submit') {
-      console.log(this.eventType);
       this.$errorCount.attr('tabindex',-1);
       this.$errorCount[0].focus();
     }
@@ -323,8 +322,8 @@
     $target.append(val);
   };
 
-  FormValidator.prototype.focusFirstSummaryItem = function() {
-    this.$errorList.children().first().find('a')[0].focus();
+  FormValidator.prototype.focusFirstInvalidItem = function() {
+    this.getInvalidFields()[0].elem[0].focus();
   };
 
   FormValidator.prototype.addLiveRegion = function($target, val) {
