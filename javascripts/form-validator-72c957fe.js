@@ -6,9 +6,12 @@
 
     this.requiredFieldSelector = options.requiredFieldSelector || '[aria-required]';
     this.inputParentSelector = options.inputParentSelector || '.form__row';
+    this.inputGroupItemSelector = options.inputGroupItemSelector || '.form__group-item';
+    this.errorContainer = options.errorContainer || '.js-error-container';
     this.alertSelector = options.alertSelector || '.js-alert';
     this.requiredFields = [];
     this.summaryIsVisible = false;
+    this.eventType = null;
     this.$form = $(options.formSelector);
     this.$currentField = null;
     this.$errorSummary = $('.js-error-summary');
@@ -45,6 +48,7 @@
 
   FormValidator.prototype.handleFieldBlur = function(e) {
     if(this.validateOnBlur) {
+      this.eventType = 'blur';
       this.setCurrentField($(e.target));
       this.checkValidity(this.$currentField);
       this.updateSummary();
@@ -52,6 +56,7 @@
   };
 
   FormValidator.prototype.handleFormSubmit = function() {
+    this.eventType = 'submit';
     this.checkForm();
     return false;
   };
@@ -67,7 +72,7 @@
       this.$form.submit();
     }
     else {
-      // this.focusFirstSummaryItem();
+      this.focusFirstInvalidItem();
     }
   };
 
@@ -103,7 +108,6 @@
       this.updateFieldValidity(this.$currentField, 'invalid');
       this.formIsValid = false;
     }
-
   };
 
   FormValidator.prototype.setFieldValidState = function() {
@@ -115,7 +119,7 @@
 
     this.removeInlineError(this.$currentField);
 
-    this.findParent(this.$currentField)
+    this.findParentContainer(this.$currentField)
       .addClass(this.validClass)
       .removeClass(this.parentInvalidClass);
   };
@@ -131,13 +135,25 @@
 
     this.addInlineError(this.$currentField);
 
-    this.findParent(this.$currentField)
+    this.findParentContainer(this.$currentField)
       .addClass(this.parentInvalidClass)
       .removeClass(this.validClass);
   };
 
-  FormValidator.prototype.findParent = function($field) {
-    return $field.closest(this.inputParentSelector);
+  FormValidator.prototype.findParentContainer = function($field) {
+    var $fieldContainer = $field.closest(this.inputGroupItemSelector),
+        fieldType = this.getFieldType($field);
+
+    if((fieldType === 'select' || fieldType === 'checkbox') && $fieldContainer.length){
+      return $fieldContainer;
+    }
+    else {
+      return $field.closest(this.inputParentSelector);
+    }
+  };
+
+  FormValidator.prototype.findErrorContainer = function($field) {
+    return $field.siblings(this.inputParentSelector);
   };
 
   FormValidator.prototype.setCurrentField = function($field) {
@@ -187,7 +203,7 @@
   };
 
   FormValidator.prototype.isRadioChecked = function($field) {
-    return !!this.findParent($field).find('[name="' + $field.attr('name') + '"]').filter(':checked').length;
+    return !!this.findParentContainer($field).find('[name="' + $field.attr('name') + '"]').filter(':checked').length;
   };
 
   FormValidator.prototype.isValidEmail = function($field) {
@@ -212,16 +228,16 @@
         errorId = 'error-inline-' + $field.attr('id'),
         $error;
 
-    if(!this.findParent($field).find('.js-error-text').length){
-      $error = $('<span/>').addClass('js-error-text').attr('id',errorId).text(errorMsg);
-      this.findParent($field).find('.js-error-container').append($error);
+    if(!this.findParentContainer($field).find('.js-error-text').length){
+      $error = $('<span/>').addClass('js-error-text form__row-error').attr('id',errorId).text(errorMsg);
+      this.findParentContainer($field).find('.js-error-container').append($error);
     }
 
     this.addAlert(this.$alert, errorMsg);
   };
 
   FormValidator.prototype.removeInlineError = function($field) {
-    this.findParent($field).find('.js-error-text').remove();
+    this.findParentContainer($field).find('.js-error-text').remove();
   };
 
   // FormValidator.prototype.addSummaryError = function($field) {
@@ -254,9 +270,11 @@
   FormValidator.prototype.updateSummaryItems = function() {
     var field;
     var $items = [];
+    var invalidFields = this.getInvalidFields();
+
     this.$errorList.empty();
-    for(field in this.getInvalidFields()) {
-      $items.push(this.createSummaryItem(this.requiredFields[field].elem));
+    for(field in invalidFields) {
+      $items.push(this.createSummaryItem(invalidFields[field].elem));
     }
     this.$errorList.append($items);
   };
@@ -267,7 +285,11 @@
 
   FormValidator.prototype.updateErrorCountMessage = function() {
     var errorLength = this.getErrorCount();
-    this.addLiveRegion(this.$errorCount, errorLength + (errorLength > 1? ' errors' : ' error') + ' prevented calculation:' );
+    if(this.eventType === 'submit') {
+      this.addLiveRegion(this.$errorCount, errorLength + (errorLength > 1? ' errors' : ' error') + ' prevented calculation<span class="visually-hidden">. Tab to cycle through errors</span> :' );
+      this.$errorCount.attr('tabindex',-1);
+      this.$errorCount[0].focus();
+    }
   };
 
   FormValidator.prototype.showSummary = function() {
@@ -300,8 +322,8 @@
     $target.append(val);
   };
 
-  FormValidator.prototype.focusFirstSummaryItem = function() {
-    this.$errorList.children().first().find('a')[0].focus();
+  FormValidator.prototype.focusFirstInvalidItem = function() {
+    this.getInvalidFields()[0].elem[0].focus();
   };
 
   FormValidator.prototype.addLiveRegion = function($target, val) {
