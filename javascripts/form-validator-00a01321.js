@@ -225,7 +225,7 @@
 
   FormValidator.prototype.addInlineError = function($field) {
     var errorMsg = $field.data('error-message'),
-        errorId = 'error-inline-' + $field.attr('id'),
+        errorId = 'error-inline-' + this.getFieldType($field) === 'radio' ? $field.attr('name') : $field.attr('id'),
         $error;
 
     if(!this.findParentContainer($field).find('.js-error-text').length){
@@ -329,11 +329,6 @@
   FormValidator.prototype.addLiveRegion = function($target, val) {
     $target.empty();
     $target.append(val);
-    // $('<span class="js-error-text" role="status" aria-atomic="false" aria-relevant="text" tabindex="-1" />')
-    //     .appendTo($target)
-    //     .append(val)
-    //     .css('visibility', 'hidden')
-    //     .css('visibility', 'visible');
   };
 
   window.FormValidator = FormValidator;
