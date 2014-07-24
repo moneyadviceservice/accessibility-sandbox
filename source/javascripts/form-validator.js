@@ -225,7 +225,7 @@
 
   FormValidator.prototype.addInlineError = function($field) {
     var errorMsg = $field.data('error-message'),
-        errorId = 'error-inline-' + $field.attr('id'),
+        errorId = 'error-inline-' + this.getFieldType($field) === 'radio' ? $field.attr('name') : $field.attr('id'),
         $error;
 
     if(!this.findParentContainer($field).find('.js-error-text').length){
