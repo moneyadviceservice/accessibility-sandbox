@@ -30,7 +30,7 @@
     <link href="../stylesheets/enhanced_responsive-0d7b88b2.css" media="only all" rel="stylesheet" type="text/css" />
     <!--<![endif]-->
 
-      <link href="../stylesheets/colour-contrast/styles-182ded29.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/colour-contrast/styles-3668e0fd.css" media="screen" rel="stylesheet" type="text/css" />
 
     
   </head>
@@ -44,23 +44,85 @@
 <p>Is our colour palette accessible?</p>
 <p>A hand tool for checking is the <a href="http://wave.webaim.org/report#/http%3A%2F%2Fmoneyadviceservice.github.io%2Ffrontend-sandbox%2Fcolour-contrast%2F">WAVE</a> - click the contrast tab</p>
 
+<h2>Small text</h2>
 <div class="colours">
-  <div class="colours__item" style="background:#fae8e8; color:#d52b30; font-size:16px">
-    Background #fae8e8 Foreground #d52b30 Size 16px
-  </div>
-  <div class="colours__item" style="background:#edf0f0; color:#1f6faa; font-size:16px">
-    Background #edf0f0 Foreground #1f6faa Size 16px
-  </div>
-  <div class="colours__item" style="background:#edf0f0; color:#1f6faa; font-size:24px">
-    Background #edf0f0 Foreground #1f6faa Size 24px
-  </div>
-  <div class="colours__item" style="background:#edf0f0; color:#2d6a1e; font-size:16px">
-    Background #edf0f0 Foreground #2d6a1e Size 16px
-  </div>
-  <div class="colours__item" style="background:#428513; color:#ffffff; font-size:16px">
-    Background #428513 Foreground #ffffff Size 16px
-  </div>
+
 </div>
+
+<h2>Large text</h2>
+<div class="colours colours--large">
+
+</div>
+
+
+
+
+<!--
+  white = '#fff',
+off-white = '#f5f7f7',
+
+  black = '#2e3030',
+black-two = '#4e4f4f',
+grey-primary = '#6d6d6d',
+
+  green-primary = '#428513',
+  green-secondary = '#61a612',
+green-tertiary = '#115329',
+green-quaternary = '#337018',
+  green-quinary = '#2d6a1e;
+
+green-paler = '#f5f7f8',
+green-pale = '#f7fbec',
+green-light = '#b9dd48',
+green-medium = '#81c724',
+green-bright = '#adcf3f',
+green-dark = '#388426',
+green-one = '#77bf24',
+green-two = '#20600f',
+green-three = '#f7fbed',
+
+teal-light = '#109e89',
+teal-dark = '#0e7f6c',
+
+blue-pale = '#ebf2f5',
+blue-light = '#e6f2f7',
+  blue-medium = '#1f6faa',
+blue-dark = '#18507a',
+blue-extra-dark = '#0a4358',
+
+grey-palest = '#dce3e1',
+grey-paler = '#f2f4f5',
+  grey-pale = '#edf0f0',
+grey-paleo = '#ecf0ef',
+grey-normal = '#d1d5d5',
+grey-seven = '#929494',
+grey-eight = '#dce0e0',
+grey-nine = '#e2e2e2',
+grey-ten = '#f4f4f4',
+grey-light = '#a8b2ba',
+grey-medium-dark = '#6a6d6d',
+grey-medium = '#526675',
+grey-dark = '#394752',
+
+bluegrey-dark = '#96b4c0',
+bluegrey-medium = '#cbdae0',
+bluegrey-light = '#dae1df',
+
+  pink-light = '#fae8e8',
+pink-medium = '#e43c8a',
+pink-dark = '#bf2682',
+
+red-light = '#e06e72',
+  red-medium = '#d52b30',
+red-dark = '#af2745',
+
+orange-medium = '#f06431',
+orange-dark = '#c95d2d',
+
+yellow-light = '#ebd520',
+yellow-dark = '#ddae1f';
+
+-->
 
     </div>
 
@@ -84,6 +146,42 @@
       });
     </script>
 
-    
+      <script type="text/javascript">
+
+    var white = '#ffffff',
+      black = '#2e3030',
+      grey_pale = '#edf0f0',
+      green_primary = '#428513',
+      green_secondary = '#61a612',
+      green_dark = '#388426',
+      green_quinary = '#2d6a1e';
+      blue_medium = '#1f6faa',
+      pink_light = '#fae8e8',
+      red_medium = '#d52b30';
+
+    var colours = [
+      [white, black],
+      [white, green_secondary],
+      [white, green_dark],
+      [grey_pale, black],
+      [grey_pale, blue_medium],
+      [grey_pale, green_quinary],
+      [green_primary, white],
+      [pink_light, red_medium]
+    ]
+
+    $(function(){
+      var html = '',
+          css = '';
+
+      $.each( colours, function( index, value ) {
+        css = 'background:' + value[0] + '; color:' + value[1];
+        html = html + '<div class="colours__item" style="' + css + '">' + css + '</div>';
+      });
+
+      $('.colours').html(html);
+    });
+  </script>
+
   </body>
 </html>
