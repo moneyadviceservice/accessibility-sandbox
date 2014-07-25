@@ -1,0 +1,216 @@
+/* line 5, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/_clearfix.scss */
+.tabs {
+  zoom: 1; }
+  /* line 9, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/_clearfix.scss */
+  .tabs:before, .tabs:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  /* line 16, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/_clearfix.scss */
+  .tabs:after {
+    clear: both; }
+
+/* SPAN elements with the classes below are added by prettyprint. */
+/* line 4, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+.pln {
+  color: black; }
+
+/* plain text */
+@media screen {
+  /* line 7, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .str {
+    color: #008800; }
+
+  /* string content */
+  /* line 8, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .kwd {
+    color: #000088; }
+
+  /* a keyword */
+  /* line 9, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .com {
+    color: #880000; }
+
+  /* a comment */
+  /* line 10, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .typ {
+    color: #660066; }
+
+  /* a type name */
+  /* line 11, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .lit {
+    color: #006666; }
+
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  /* line 13, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .pun, .opn, .clo {
+    color: #666600; }
+
+  /* line 14, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .tag {
+    color: #000088; }
+
+  /* a markup tag name */
+  /* line 15, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .atn {
+    color: #660066; }
+
+  /* a markup attribute name */
+  /* line 16, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .atv {
+    color: #008800; }
+
+  /* a markup attribute value */
+  /* line 17, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .dec, .var {
+    color: #660066; }
+
+  /* a declaration; a variable name */
+  /* line 18, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .fun {
+    color: red; }
+
+  /* a function name */ }
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  /* line 23, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .str {
+    color: #006600; }
+
+  /* line 24, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .kwd {
+    color: #006;
+    font-weight: bold; }
+
+  /* line 25, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .com {
+    color: #600;
+    font-style: italic; }
+
+  /* line 26, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .typ {
+    color: #404;
+    font-weight: bold; }
+
+  /* line 27, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .lit {
+    color: #004444; }
+
+  /* line 28, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .pun, .opn, .clo {
+    color: #444400; }
+
+  /* line 29, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .tag {
+    color: #006;
+    font-weight: bold; }
+
+  /* line 30, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .atn {
+    color: #440044; }
+
+  /* line 31, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+  .atv {
+    color: #006600; } }
+/* Specify class=linenums on a pre to get line numbering */
+/* line 35, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* IE indents via margin-left */
+/* line 45, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  background: #f7f7f7;
+  border-left: 1px solid #ccc; }
+
+/* line 50, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+pre.prettyprint {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 0px 0px 1em 10px;
+  background: #fdfdfd;
+  color: #bbb; }
+
+/* line 58, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+.live-example {
+  border-top: 1px solid #ddd; }
+
+/* line 62, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+.l-container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 10px; }
+
+/* line 69, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute; }
+
+/* line 80, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/all.scss */
+.hidden {
+  display: none; }
+
+/* line 3, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+* {
+          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+/* line 12, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+.tabs__nav {
+  float: left;
+  text-align: left;
+  width: 25%; }
+  /* line 19, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .tabs__nav button,
+  .tabs__nav a {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: #ccc;
+    color: black;
+    display: block;
+    margin-bottom: 2px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+    width: 100%; }
+    /* line 31, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+    .tabs__nav button:focus,
+    .tabs__nav a:focus {
+      border-color: #000; }
+    /* line 35, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+    .tabs__nav button:active,
+    .tabs__nav a:active {
+      border-color: green; }
+  /* line 41, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .tabs__nav .is-active a, .tabs__nav .is-active button {
+    font-weight: bold; }
+
+/* line 47, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+.tabs__item {
+  border: 1px solid #000;
+  display: none;
+  float: right;
+  padding: 0 20px 40px;
+  width: 70%; }
+  /* line 54, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/tabs/styles.scss */
+  .no-js .tabs__item, .tabs__item.is-active {
+    display: block; }
