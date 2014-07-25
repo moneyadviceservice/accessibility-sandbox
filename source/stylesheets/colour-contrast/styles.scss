@@ -1,8 +1,13 @@
 .colours {
   margin:20px;
+  font-size:16px;
+}
+.colours--large {
+  font-size:24px;
 }
 
 .colours__item {
   padding:4px;
   margin-bottom:1px;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
