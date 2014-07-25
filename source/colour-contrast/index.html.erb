@@ -1,0 +1,30 @@
+---
+title: Colour Contrast
+---
+
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'colour-contrast/styles' %>
+<% end %>
+
+<h1>Breadcrumb</h1>
+
+<h2>Question</h2>
+<p>Is our colour pallette accessible?</p>
+
+<div class="colours">
+  <div class="colours__item" style="background:#fae8e8; color:#d52b30; font-size:16px">
+    Background #fae8e8 Text #d52b30 Size 16px
+  </div>
+  <div class="colours__item" style="background:#edf0f0; color:#1f6faa; font-size:16px">
+    Background #edf0f0 Text #1f6faa Size 16px
+  </div>
+  <div class="colours__item" style="background:#edf0f0; color:#1f6faa; font-size:24px">
+    Background #edf0f0 Text #1f6faa Size 24px
+  </div>
+  <div class="colours__item" style="background:#edf0f0; color:#2d6a1e; font-size:16px">
+    Background #edf0f0 Text #2d6a1e Size 16px
+  </div>
+  <div class="colours__item" style="background:#428513; color:#ffffff; font-size:16px">
+    Background #428513 Text #ffffff Size 16px
+  </div>
+</div>
