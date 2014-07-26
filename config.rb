@@ -119,6 +119,7 @@ set :colours, [
   [white, black],
   [white, green_secondary],
   [white, green_dark],
+  [white, blue_medium],
   [grey_pale, black],
   [grey_pale, blue_medium],
   [grey_pale, green_quinary],
