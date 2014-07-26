@@ -12,18 +12,7 @@ title: Colour Contrast
 <p>Is our colour palette accessible?</p>
 <p>A hand tool for checking is the <a href="http://wave.webaim.org/report#/http%3A%2F%2Fmoneyadviceservice.github.io%2Ffrontend-sandbox%2Fcolour-contrast%2F">WAVE</a> - click the contrast tab</p>
 
-
-<h2>Small text</h2>
 <div class="colours">
-  <% colours.each do |colour| %>
-    <div class="colours__item" style="background:<%= colour[0] %>;color:<%= colour[1] %>">
-      background:<%= colour[0] %> color:<%= colour[1] %>
-    </div>
-  <% end %>
-</div>
-
-<h2>Large text</h2>
-<div class="colours colours--large">
   <% colours.each do |colour| %>
     <div class="colours__item" style="background:<%= colour[0] %>;color:<%= colour[1] %>">
       background:<%= colour[0] %> color:<%= colour[1] %>
