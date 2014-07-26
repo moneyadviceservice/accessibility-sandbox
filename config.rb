@@ -51,6 +51,81 @@
 # set :images_dir, 'assets/images'
 set :fonts_dir, 'vendor/assets/bower_components/frontend-assets/fonts'
 
+set :white, '#ffffff'
+set :off_white, '#f5f7f7'
+
+set :black, '#2e3030'
+set :black_two, '#4e4f4f'
+set :grey_primary, '#6d6d6d'
+
+set :green_primary, '#428513'
+set :green_secondary, '#61a612'
+set :green_tertiary, '#115329'
+set :green_quaternary, '#337018'
+set :green_quinary, '#2d6a1e'
+
+set :green_paler, '#f5f7f8'
+set :green_pale, '#f7fbec'
+set :green_light, '#b9dd48'
+set :green_medium, '#81c724'
+set :green_bright, '#adcf3f'
+set :green_dark, '#388426'
+set :green_one, '#77bf24'
+set :green_two, '#20600f'
+set :green_three, '#f7fbed'
+
+set :teal_light, '#109e89'
+set :teal_dark, '#0e7f6c'
+
+set :blue_pale, '#ebf2f5'
+set :blue_light, '#e6f2f7'
+set :blue_medium, '#1f6faa'
+set :blue_dark, '#18507a'
+set :blue_extra_dark, '#0a4358'
+
+set :grey_palest, '#dce3e1'
+set :grey_paler, '#f2f4f5'
+set :grey_pale, '#edf0f0'
+set :grey_paleo, '#ecf0ef'
+set :grey_normal, '#d1d5d5'
+set :grey_seven, '#929494'
+set :grey_eight, '#dce0e0'
+set :grey_nine, '#e2e2e2'
+set :grey_ten, '#f4f4f4'
+set :grey_light, '#a8b2ba'
+set :grey_medium_dark, '#6a6d6d'
+set :grey_medium, '#526675'
+set :grey_dark, '#394752'
+
+set :bluegrey_dark, '#96b4c0'
+set :bluegrey_medium, '#cbdae0'
+set :bluegrey_light, '#dae1df'
+
+set :pink_light, '#fae8e8'
+set :pink_medium, '#e43c8a'
+set :pink_dark, '#bf2682'
+
+set :red_light, '#e06e72'
+set :red_medium, '#d52b30'
+set :red_dark, '#af2745'
+
+set :orange_medium, '#f06431'
+set :orange_dark, '#c95d2d'
+
+set :yellow_light, '#ebd520'
+set :yellow_dark, '#ddae1f'
+
+set :colours, [
+  [white, black],
+  [white, green_secondary],
+  [white, green_dark],
+  [grey_pale, black],
+  [grey_pale, blue_medium],
+  [grey_pale, green_quinary],
+  [green_primary, white],
+  [pink_light, red_medium]
+]
+
 activate :autoprefixer
 
 after_configuration do
