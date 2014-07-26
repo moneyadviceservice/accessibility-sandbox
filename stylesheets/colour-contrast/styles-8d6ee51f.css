@@ -1,11 +1,11 @@
 /* line 1, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/colour-contrast/styles.scss */
 .colours {
   margin: 20px;
-  font-size: 16px; }
+  font-size: 14px; }
 
 /* line 5, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/colour-contrast/styles.scss */
 .colours--large {
-  font-size: 24px; }
+  font-size: 20px; }
 
 /* line 9, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/colour-contrast/styles.scss */
 .colours__item {
