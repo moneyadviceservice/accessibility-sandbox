@@ -88,6 +88,7 @@ set :grey_paler, '#f2f4f5'
 set :grey_pale, '#edf0f0'
 set :grey_paleo, '#ecf0ef'
 set :grey_normal, '#d1d5d5'
+set :grey_normal_hover, '#eceded'
 set :grey_seven, '#929494'
 set :grey_eight, '#dce0e0'
 set :grey_nine, '#e2e2e2'
@@ -113,18 +114,42 @@ set :orange_medium, '#f06431'
 set :orange_dark, '#c95d2d'
 
 set :yellow_light, '#ebd520'
+set :yellow_light_hover, '#efde4f'
 set :yellow_dark, '#ddae1f'
 
 set :colours, [
-  [white, black],
+  [white, '#C1CBD4'], # pdf/doc icon
+  [white, grey_primary], #intro text
+  [white, black], # default text
   [white, green_secondary],
+  [white, '#3E8407'], # green tick
   [white, green_dark],
+  [white, bluegrey_dark],
   [white, blue_medium],
+  [white, red_medium], # form error message
+  [white, '#B13025'], # red cross
+  [grey_ten, black], # table row
+  [grey_ten, blue_medium], # table row
+  [grey_ten, '#6B6B6B'], # table row with info button
   [grey_pale, black],
   [grey_pale, blue_medium],
   [grey_pale, green_quinary],
+  [grey_nine, black],
+  [grey_normal_hover, black],
+  [grey_normal, black],
+  [grey_normal, grey_medium], #disabled text input
+  [grey_medium, white],
+  [green_pale, black],
+  [green_pale, blue_medium], # callout with a link
+  [green_secondary, white], # menu button hover
   [green_primary, white],
-  [pink_light, red_medium]
+  [green_two, white], # menu button
+  [pink_light, red_medium],
+  [blue_pale, black],
+  [blue_pale, blue_medium],
+  [blue_light, blue_medium],
+  [yellow_light_hover, black],
+  [yellow_light, black]
 ]
 
 activate :autoprefixer
