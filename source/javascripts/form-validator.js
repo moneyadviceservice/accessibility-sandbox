@@ -83,10 +83,11 @@
     this.formIsValid = true;
     this.summaryIsVisible = true;
 
-    for(field in this.requiredFields) {
-      that.setCurrentField(this.requiredFields[field].elem);
-      that.checkValidity(this.requiredFields[field]);
-    }
+    this.requiredFields.forEach(function(field) {
+      that.setCurrentField(field.elem);
+      that.checkValidity(field);
+    });
+
     this.updateSummary();
 
     return this.formIsValid;
@@ -271,11 +272,13 @@
     var field;
     var $items = [];
     var invalidFields = this.getInvalidFields();
+    var that = this;
 
     this.$errorList.empty();
-    for(field in invalidFields) {
-      $items.push(this.createSummaryItem(invalidFields[field].elem));
-    }
+    invalidFields.forEach(function(field) {
+      $items.push(that.createSummaryItem(field.elem));
+    });
+
     this.$errorList.append($items);
   };
 
