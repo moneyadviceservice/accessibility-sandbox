@@ -98,6 +98,9 @@ set :grey_medium_dark, '#6a6d6d'
 set :grey_medium, '#526675'
 set :grey_dark, '#394752'
 
+set :grey_button_disabled_bg, '#E3E6E6'
+set :grey_button_disabled_foregrround, '#818282'
+
 set :bluegrey_dark, '#96b4c0'
 set :bluegrey_medium, '#cbdae0'
 set :bluegrey_light, '#dae1df'
@@ -110,12 +113,21 @@ set :red_light, '#e06e72'
 set :red_medium, '#d52b30'
 set :red_dark, '#af2745'
 
+set :orange_feedback_bg, '#faa600'
+set :orange_feedback_grey_foreground, '#fdf6ff'
 set :orange_medium, '#f06431'
 set :orange_dark, '#c95d2d'
 
 set :yellow_light, '#ebd520'
 set :yellow_light_hover, '#efde4f'
 set :yellow_dark, '#ddae1f'
+
+set :yellow_button_disabled_bg, '#F3E679'
+set :yellow_button_disabled_foreground, '#818282'
+
+set :yellow_steps_bg, '#ecd600'
+set :yellow_steps_black_foreground, '#333333'
+
 
 set :colours, [
   [white, '#C1CBD4'], # pdf/doc icon
@@ -134,6 +146,7 @@ set :colours, [
   [grey_pale, black],
   [grey_pale, blue_medium],
   [grey_pale, green_quinary],
+  [grey_button_disabled_bg, grey_button_disabled_foregrround],
   [grey_nine, black],
   [grey_normal_hover, black],
   [grey_normal, black],
@@ -149,7 +162,10 @@ set :colours, [
   [blue_pale, blue_medium],
   [blue_light, blue_medium],
   [yellow_light_hover, black],
-  [yellow_light, black]
+  [yellow_light, black],
+  [yellow_steps_bg, yellow_steps_black_foreground], # steps list num - e.g mortgage calc
+  [yellow_button_disabled_bg, yellow_button_disabled_foreground],
+  [orange_feedback_bg, orange_feedback_grey_foreground] #feedback button on desktop
 ]
 
 activate :autoprefixer
