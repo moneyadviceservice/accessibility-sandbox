@@ -229,7 +229,7 @@
         $error;
 
     if(!this.findParentContainer($field).find('.js-error-text').length){
-      $error = $('<span/>').addClass('js-error-text form__row-error').attr('id',errorId).text(errorMsg);
+      $error = $('<span/>').addClass('js-error-text form__row-error').attr('id', 'inline-error-' +  errorId).text(errorMsg);
       this.findParentContainer($field).find('.js-error-container').append($error);
     }
 
