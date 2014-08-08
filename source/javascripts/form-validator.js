@@ -23,6 +23,7 @@
     this.parentInvalidClass = options.parentInvalidClass || 'is-errored';
     this.invalidClass = options.invalidClass || 'is-invalid';
     this.formIsValid = null;
+    this.formIsSubmitted = false;
     this.handleFieldBlur = $.proxy(this.handleFieldBlur, this);
     this.handleFormSubmit = $.proxy(this.handleFormSubmit, this);
     this.validateOnBlur = options.validateOnBlur || true;
@@ -55,10 +56,16 @@
     }
   };
 
-  FormValidator.prototype.handleFormSubmit = function() {
-    this.eventType = 'submit';
-    this.checkForm();
-    return false;
+  FormValidator.prototype.handleFormSubmit = function(event) {
+    if(this.formIsSubmitted !== true) {
+      this.eventType = 'submit';
+      this.checkForm();
+      return false;
+    }
+    else {
+      return true;
+    }
+
   };
 
   FormValidator.prototype.setupEventHandlers = function() {
@@ -69,6 +76,7 @@
 
   FormValidator.prototype.checkForm = function(e) {
     if(this.checkAllFields()) {
+      this.formIsSubmitted = true;
       this.$form.submit();
     }
     else {
@@ -83,10 +91,11 @@
     this.formIsValid = true;
     this.summaryIsVisible = true;
 
-    for(field in this.requiredFields) {
-      that.setCurrentField(this.requiredFields[field].elem);
-      that.checkValidity(this.requiredFields[field]);
-    }
+    this.requiredFields.forEach(function(field) {
+      that.setCurrentField(field.elem);
+      that.checkValidity(field);
+    });
+
     this.updateSummary();
 
     return this.formIsValid;
@@ -271,11 +280,13 @@
     var field;
     var $items = [];
     var invalidFields = this.getInvalidFields();
+    var that = this;
 
     this.$errorList.empty();
-    for(field in invalidFields) {
-      $items.push(this.createSummaryItem(invalidFields[field].elem));
-    }
+    invalidFields.forEach(function(field) {
+      $items.push(that.createSummaryItem(field.elem));
+    });
+
     this.$errorList.append($items);
   };
 
