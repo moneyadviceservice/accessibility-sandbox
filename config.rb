@@ -132,13 +132,12 @@ set :yellow_steps_bg, '#ecd600'
 set :yellow_steps_black_foreground, '#333333'
 
 set :colours, [
-  [white, '#C1CBD4'], # pdf/doc icon
+  [white, '#6d6d6d'], # pdf/doc icon
   [white, grey_primary], #intro text
   [white, black], # default text
   [white, green_secondary],
   [white, '#3E8407'], # green tick
   [white, green_dark],
-  [white, bluegrey_dark],
   [white, blue_medium],
   [white, red_medium], # form error message
   [white, '#B13025'], # red cross
