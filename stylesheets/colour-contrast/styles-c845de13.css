@@ -1,0 +1,10 @@
+/* line 1, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/colour-contrast/styles.scss */
+.colours {
+  margin: 20px;
+  font-size: 14px; }
+
+/* line 6, /Users/alistairduggin/moneyadviceservice/frontend-sandbox/source/stylesheets/colour-contrast/styles.scss */
+.colours__item {
+  padding: 4px;
+  margin-bottom: 1px;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
